@@ -2,7 +2,7 @@
 
 > Turn any EPUB book into a rich, interactive visual summary — AI-generated chapter infographics, a clickable knowledge graph, and a full markdown export.
 
-Built to run inside **Claude Code** with zero API costs (uses your Claude Pro or Max subscription). Also works with Anthropic API, OpenAI, or any OpenAI-compatible provider.
+Works with **Claude Code** (no API key needed — uses your Claude Pro or Max subscription). Also supports Anthropic API, OpenAI, or any OpenAI-compatible provider.
 
 ---
 
@@ -18,55 +18,65 @@ For every book you ingest, the tool produces a single self-contained HTML file w
 
 ---
 
-## Quickest way to use it — Claude Code (no API key needed)
+## Quickstart
 
-If you have **Claude Code** with a Claude Max subscription, this is the fastest path. No API key required — it uses your existing session.
+### Prerequisites
+
+- **Node.js 18+**
+- **Claude Code** installed and logged in with a Claude Pro or Max account:
+  ```bash
+  npm install -g @anthropic-ai/claude-code
+  claude  # log in on first run
+  ```
+
+### Setup (one time)
 
 ```bash
-# 1. Clone and install
 git clone https://github.com/raamcharran/epub-summarizer-multiprovider
 cd epub-summarizer-multiprovider
 npm install
-
-# 2. Run inside Claude Code
-# Open this folder in Claude Code, then type:
-/book "/path/to/your-book.epub"
 ```
 
-Claude Code handles the rest. You'll be notified when the HTML is ready (usually 2–15 min depending on book length). All stages are cached — if interrupted, re-running resumes from where it left off.
-
----
-
-## Using with an API key (outside Claude Code)
+### Run it
 
 ```bash
-# 1. Clone and install
-git clone https://github.com/raamcharran/epub-summarizer-multiprovider
-cd epub-summarizer-multiprovider
-npm install
-
-# 2. Set your API key (pick one)
-export ANTHROPIC_API_KEY=sk-ant-...
-# or: export OPENAI_API_KEY=sk-...
-
-# 3. Ingest a book
 node book.js ingest "/path/to/your-book.epub"
 ```
 
-Output is saved to `library/<book-slug>/output/summary.html`. Open it in any browser.
+That's it. The tool uses your active Claude Code session — no API key required. Output is saved to `library/<book-slug>/output/summary.html`. Open it in any browser.
+
+Typical time: **2–5 min** for a short book, **10–20 min** for a long one. All stages are cached — if interrupted, re-running resumes from where it left off.
 
 ---
 
-## Supported AI providers
+## Using with an API key instead
+
+If you're not on Claude Code, set one of these before running:
+
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...
+# or
+export OPENAI_API_KEY=sk-...
+```
+
+Then run the same command:
+
+```bash
+node book.js ingest "/path/to/your-book.epub"
+```
+
+See [PROVIDERS.md](PROVIDERS.md) for full setup details including OpenAI-compatible endpoints (Groq, Together, Ollama, etc.).
+
+---
+
+## All providers
 
 | Provider | How to activate | Default model |
 |---|---|---|
-| **Claude Code** (recommended) | Use the `/book` skill inside Claude Code (Pro or Max) | session default |
+| **Claude Code** (recommended) | Logged-in Claude Code session (Pro or Max) | session default |
 | **Anthropic API** | `ANTHROPIC_API_KEY=sk-ant-...` | `claude-sonnet-4-6` |
 | **OpenAI** | `OPENAI_API_KEY=sk-...` | `gpt-4o-mini` |
 | **OpenAI-compatible** (Groq, Together, Ollama…) | `OPENAI_API_KEY=...` + `OPENAI_BASE_URL=https://...` | `gpt-4o-mini` |
-
-Copy `.env.example` to `.env` and fill in your key. See [PROVIDERS.md](PROVIDERS.md) for full setup details.
 
 Optional overrides:
 
@@ -106,14 +116,6 @@ Each stage is independently cached to disk. Re-running skips completed stages au
 
 ---
 
-## Requirements
-
-- **Node.js 18+**
-- One of: Claude Code (Claude Max), Anthropic API key, or OpenAI API key
-- A DRM-free EPUB file
-
----
-
 ## Known limitations
 
 - **DRM-protected EPUBs will not work.** You need a DRM-free copy.
@@ -130,7 +132,7 @@ book.js        — CLI entry point
 lib/
   ai.js        — Multi-provider AI abstraction
   analyze.js   — Chapter analysis + book synthesis prompts
-  rag.js        — Pure-JS TF-IDF search engine
+  rag.js       — Pure-JS TF-IDF search engine
   html.js      — HTML + SVG + Markdown renderer
   library.js   — Per-book disk storage and caching
 ```
@@ -144,7 +146,7 @@ Two public domain books from [Project Gutenberg](https://www.gutenberg.org/) wer
 - **The Wealth of Nations** — Adam Smith ([gutenberg.org](https://www.gutenberg.org/ebooks/3300))
 - **Random Reminiscences of Men and Events** — John D. Rockefeller ([gutenberg.org](https://www.gutenberg.org/ebooks/17090))
 
-Both are DRM-free and download as EPUB directly from Project Gutenberg.
+Both are DRM-free and available as EPUB directly from Project Gutenberg.
 
 ---
 
