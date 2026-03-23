@@ -1,0 +1,29 @@
+{
+  "name": "epub-summarizer-multiprovider",
+  "version": "1.0.0",
+  "description": "Turn any EPUB into an interactive visual summary — AI-generated infographics, knowledge graph, and chapter breakdowns. Works with Anthropic, OpenAI, or local Claude CLI.",
+  "main": "book.js",
+  "type": "module",
+  "keywords": [
+    "epub",
+    "ebook",
+    "ai",
+    "summary",
+    "infographic",
+    "knowledge-graph",
+    "anthropic",
+    "openai",
+    "claude"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node book.js",
+    "test": "node --test test/unit.test.js"
+  },
+  "dependencies": {
+    "epub2": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
