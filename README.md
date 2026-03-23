@@ -2,7 +2,7 @@
 
 > Turn any EPUB book into a rich, interactive visual summary — AI-generated chapter infographics, a clickable knowledge graph, and a full markdown export.
 
-Built to run inside **Claude Code** with zero API costs (uses your Claude Max subscription). Also works with Anthropic API, OpenAI, or any OpenAI-compatible provider.
+Built to run inside **Claude Code** with zero API costs (uses your Claude Pro or Max subscription). Also works with Anthropic API, OpenAI, or any OpenAI-compatible provider.
 
 ---
 
@@ -61,7 +61,7 @@ Output is saved to `library/<book-slug>/output/summary.html`. Open it in any bro
 
 | Provider | How to activate | Default model |
 |---|---|---|
-| **Claude Code** (recommended) | Use the `/book` skill inside Claude Code | session default |
+| **Claude Code** (recommended) | Use the `/book` skill inside Claude Code (Pro or Max) | session default |
 | **Anthropic API** | `ANTHROPIC_API_KEY=sk-ant-...` | `claude-sonnet-4-6` |
 | **OpenAI** | `OPENAI_API_KEY=sk-...` | `gpt-4o-mini` |
 | **OpenAI-compatible** (Groq, Together, Ollama…) | `OPENAI_API_KEY=...` + `OPENAI_BASE_URL=https://...` | `gpt-4o-mini` |
@@ -137,6 +137,17 @@ lib/
 
 ---
 
+## Sample books to try
+
+Two public domain books from [Project Gutenberg](https://www.gutenberg.org/) were used during development and are great for a first test run:
+
+- **The Wealth of Nations** — Adam Smith ([gutenberg.org](https://www.gutenberg.org/ebooks/3300))
+- **Random Reminiscences of Men and Events** — John D. Rockefeller ([gutenberg.org](https://www.gutenberg.org/ebooks/17090))
+
+Both are DRM-free and download as EPUB directly from Project Gutenberg.
+
+---
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE) for details.
