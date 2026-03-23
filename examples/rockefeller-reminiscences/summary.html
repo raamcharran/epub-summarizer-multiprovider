@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Random Reminiscences of Men and Events — Deep Summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background-color:#182828;background-image:radial-gradient(circle,#253535 1.5px,transparent 1.5px);background-size:24px 24px;color:#aaa;margin:0;padding:0;line-height:1.8}
+.wrap{max-width:960px;margin:0 auto;padding:0 40px 140px}
+h1,h2,h3,h4{font-family:'Inter',sans-serif;line-height:1.15;margin:0;font-weight:900}
+a{color:#ff6b4a;text-decoration:none}
+a:hover{color:#ff8c75}
+.top-nav{position:sticky;top:0;z-index:100;background:#182828;border-bottom:1px solid #253535;padding:0 40px;display:flex;align-items:center;gap:16px;height:52px}
+.top-nav .book-label{flex-shrink:0;color:#eee;font-weight:800;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.top-nav .book-label .sep{color:#ff6b4a;margin:0 8px}
+.top-nav .nav-links{display:flex;overflow-x:auto;scrollbar-width:none;flex:1;gap:0}
+.top-nav .nav-links::-webkit-scrollbar{display:none}
+.top-nav .nav-links a{flex-shrink:0;padding:0 14px;height:52px;display:flex;align-items:center;font-size:.68rem;font-weight:700;color:#888;white-space:nowrap;text-transform:uppercase;letter-spacing:.1em;transition:color .15s}
+.top-nav .nav-links a:hover,.top-nav .nav-links a.active{color:#ff6b4a;text-decoration:none}
+.hero{padding:120px 0 100px;border-bottom:1px solid #253535}
+.hero .author{color:#888;font-size:.78rem;font-weight:700;margin:0 0 20px;text-transform:uppercase;letter-spacing:.14em}
+.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);font-weight:900;color:#ff6b4a;line-height:1.0;margin:0 0 24px;letter-spacing:-.03em;max-width:860px}
+.hero .meta-line{color:#777;font-size:.82rem;margin:0}
+.part-label{display:block;font-size:.65rem;font-weight:700;color:#ff6b4a;text-transform:uppercase;letter-spacing:.2em;margin:0 0 18px}
+.claim-box{padding:80px 0;border-bottom:1px solid #253535}
+.claim-box p{margin:0;font-size:1.35rem;line-height:1.65;color:#eee;font-weight:500;max-width:800px}
+.book-summary{padding:80px 0;border-bottom:1px solid #253535}
+.book-summary h2{font-size:2.8rem;color:#eee;margin-bottom:36px}
+.book-summary p{margin:0 0 18px;color:#aaa;font-size:1rem;line-height:1.85}
+.chapters-intro{padding:80px 0 0}
+.section-title{font-size:2.8rem;color:#eee;margin:0}
+.ch-section{padding:60px 0;border-bottom:1px solid #253535;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.ch-section.visible{opacity:1;transform:none}
+.ch-section.highlight .ch-header h2{color:#ff6b4a}
+.ch-header{margin-bottom:20px}
+.ch-header h2{font-size:1.9rem;color:#eee;font-weight:900;margin-bottom:8px;line-height:1.2}
+.coverage-label{font-size:.63rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.14em}
+.svg-wrap{margin:32px 0;overflow:hidden}
+.ch-summary p{margin:0 0 14px;color:#aaa;font-size:1rem;line-height:1.85}
+.quotes{margin-top:36px}
+blockquote{border-left:2px solid #ff6b4a;margin:20px 0;padding:8px 0 8px 24px;background:none;color:#ccc;font-size:1.1rem;font-style:italic;line-height:1.7}
+#kg-wrap{padding:80px 0;border-bottom:1px solid #253535}
+.kg-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:32px}
+.kg-copy h2{font-size:2.8rem;color:#eee;margin-bottom:8px}
+.kg-copy p{color:#777;font-size:.85rem;margin:0}
+.kg-controls{display:flex;align-items:center;gap:16px}
+.kg-btn{background:none;color:#888;border:none;padding:0;font-size:.75rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.14em;transition:color .15s;font-family:'Inter',sans-serif}
+.kg-btn:hover{color:#ff6b4a}
+.kg-frame{position:relative;height:min(82vh,820px);min-height:500px;background-color:#182828;background-image:radial-gradient(circle,#253535 1.5px,transparent 1.5px);background-size:24px 24px;border:1px solid #253535;overflow:hidden}
+#kg-svg{width:100%;height:100%;display:block}
+.node circle{cursor:pointer}.node circle:hover{filter:brightness(1.15)}
+.node text{pointer-events:none;font-size:11px;font-weight:700;fill:#eee;font-family:'Inter',sans-serif}
+.link line{stroke-opacity:.35}
+.edge-label{font-size:9px;fill:#666;pointer-events:none}
+.tooltip{position:fixed;background:#1e2e2e;color:#eee;border:1px solid #253535;padding:10px 14px;font-size:13px;pointer-events:none;max-width:260px;line-height:1.5;z-index:999;display:none;box-shadow:0 4px 20px rgba(0,0,0,.6)}
+.export-wrap{padding:80px 0 0;text-align:left}
+.export-btn{background:transparent;color:#ff6b4a;border:1px solid #ff6b4a;padding:12px 28px;font-size:.72rem;cursor:pointer;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:all .2s;font-family:'Inter',sans-serif}
+.export-btn:hover{background:#ff6b4a;color:#182828}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="book-label">Random Reminiscences of Men and Events<span class="sep">/</span>Deep Summary</div>
+  <div class="nav-links">
+    <a href="#ch_1">Chapter 1</a>
+<a href="#ch_2">Chapter 2</a>
+<a href="#ch_3">Chapter 3</a>
+    <a href="#kg-wrap">Knowledge Graph</a>
+  </div>
+
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="author">John D. Rockefeller</p>
+  <h1>Random Reminiscences of Men and Events</h1>
+  <p class="meta-line">40,588 words &middot; 2h 51m read &middot; 3 chapters</p>
+</header>
+
+<div class="claim-box">
+  <span class="part-label">Part [ 00 ] — Central Claim</span>
+  <p>John D. Rockefeller argues across memoir, philanthropy, and business history that lasting achievement — whether building a company or relieving suffering — demands the same core disciplines: systematic method over impulse, voluntary cooperation over coercion, character over argument, and long-term construction over short-term gain. The individual who internalizes these principles can act effectively in commerce and charity alike, because both domains are ultimately expressions of the same rational, moral, and organizational intelligence.</p>
+</div>
+
+<div class="book-summary">
+  <span class="part-label">Part [ 01 ] — Book Summary</span>
+  <h2>Overview</h2>
+  <div><p>Rockefeller opens his memoirs not with a balance sheet but with faces — the partners, friends, and colleagues whose character made Standard Oil possible. This framing is a thesis statement: business success is a human achievement before it is a financial one. The quality of long-term partnerships, the willingness to absorb personal risk rather than merely argue for an idea, and the patient practice of unanimous consensus before acting — these are presented as the actual load-bearing pillars of the enterprise, more durable than any single strategy or market advantage.</p><p>The founding and growth of Standard Oil is explained not as predatory monopoly but as an act of industrial rescue. The early oil refining industry was in freefall — prices collapsed, firms undercut one another into ruin, and the entire sector was structurally unstable. Rockefeller&#39;s answer was consolidation: merging competing refineries into a single cooperative organism that could eliminate waste, stabilize prices, and plan at scale. He frames this not as domination but as the application of the cooperative principle, the same logic by which partners pool judgment rather than compete against one another.</p><p>Economies of scale were the mechanical reward for consolidation: centralized purchasing, unified logistics, and shared infrastructure allowed Standard Oil to produce at costs that smaller rivals could not match. The Trust structure was the legal instrument that made unified ownership possible across state lines, translating the cooperative principle into a durable organizational form. Rockefeller insists throughout that market stability — predictable prices and reliable supply — was the public benefit that justified the entire architecture.</p><p>Chapter Two pivots from commerce to charity, but the argumentative structure is identical. Effective giving, like effective surgery, requires systematic prior preparation rather than emotional reaction. Rockefeller uses the story of Dr. Alexis Carrel — whose years of animal experiments made a midnight infant blood transfusion possible — as an emblem: scientific preparation is what transforms impossible crises into solvable problems. Impulse-driven charity is waste; organized giving, guided by a rational taxonomy of civilization&#39;s needs, is the only form that produces lasting improvement.</p><p>The principle of self-help as true aid runs through the philanthropy chapters as the cooperative principle runs through the business chapters: just as voluntary coordination among firms serves the public better than coercive dominance, charitable aid that develops a recipient&#39;s own capacities serves humanity better than direct material transfer. The University of Chicago&#39;s emphasis on research is praised for exactly this reason — it produces the capacity to solve problems rather than merely palliating their symptoms.</p><p>Waste reduction is the connective tissue linking the two halves of the book. In industry, waste is inefficiency — redundant production, ruinous price wars, duplicated logistics. In philanthropy, waste is misdirected sentiment — giving that soothes the donor&#39;s conscience without improving the recipient&#39;s condition. Both are solved by the same remedy: combination, method, and the willingness to study cause rather than treat effect. The sectarian walls dividing charities are as irrational as the competing refineries — cooperation multiplies impact in both cases.</p><p>The deeper argument is that character and method are not opposites but complements. Character — demonstrated through personal sacrifice, skin in the game, and conscience — is what makes partnerships trustworthy and institutions durable. Method — systematic planning, research, measurable goals — is what makes effort effective. Rockefeller&#39;s memoirs are an extended case that the person of good character who also disciplines themselves to act with rigorous method is the agent of genuine civilization, in business and in benevolence alike.</p></div>
+</div>
+
+<div class="chapters-intro">
+  <span class="part-label">Part [ 02 ] — Chapter Summaries</span>
+  <h2 class="section-title">Chapter Summaries</h2>
+</div>
+
+<section id="ch_1" data-concepts="partnership_complementarity,skin_in_the_game,positional_entrenchment,unanimous_consensus,business_founded_friendship" class="ch-section">
+  <span class="part-label">Part [ 01 ]</span>
+  <div class="ch-header">
+    <h2>Chapter 1</h2>
+    <span class="coverage-label">Illustrative</span>
+  </div>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" style="width:100%;font-family:'Inter',sans-serif">
+  <rect width="760" height="360" fill="#182828"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff6b4a" opacity="0.85"/>
+    </marker>
+    <marker id="arrD" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff6b4a" opacity="0.55"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="760" height="52" fill="#1e2e2e"/>
+  <rect x="0" y="0" width="3" height="52" fill="#ff6b4a"/>
+  <text x="16" y="21" fill="#eee" font-size="14" font-weight="700">Ch. 1 — The Foundation: Rockefeller's Partners &amp; People</text>
+  <text x="16" y="40" fill="#888" font-size="11">Thesis: Great enterprises emerge from complementary personalities working in concert — not from solitary genius.</text>
+
+  <!-- ── ROW 1: 4 concept boxes ── -->
+
+  <!-- Box 1: Business-Founded Friendship (x=10, w=150) -->
+  <rect x="10" y="59" width="150" height="100" rx="4" fill="#1e2e2e" stroke="#253535" stroke-width="1.5"/>
+  <rect x="10" y="59" width="3" height="100" fill="#ff6b4a"/>
+  <text x="22" y="76" fill="#ff6b4a" font-size="10" font-weight="700" letter-spacing="0.8">FOUNDATION</text>
+  <text x="22" y="92" fill="#eee" font-size="11.5" font-weight="600">Business-Founded</text>
+  <text x="22" y="106" fill="#eee" font-size="11.5" font-weight="600">Friendship</text>
+  <text x="22" y="123" fill="#888" font-size="10">Bonds forged in shared</text>
+  <text x="22" y="137" fill="#888" font-size="10">work outlast affection</text>
+  <text x="22" y="151" fill="#888" font-size="10">built on friendship alone</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="161" y1="109" x2="181" y2="109" stroke="#ff6b4a" stroke-width="1.5" opacity="0.75" marker-end="url(#arr)"/>
+
+  <!-- Box 2: Partnership Complementarity (x=185, w=163) — HIGHLIGHTED -->
+  <rect x="185" y="59" width="163" height="100" rx="4" fill="#1e2e2e" stroke="#ff6b4a" stroke-width="2"/>
+  <rect x="185" y="59" width="3" height="100" fill="#ff6b4a"/>
+  <text x="197" y="76" fill="#ff6b4a" font-size="10" font-weight="700" letter-spacing="0.8">CORE PRINCIPLE</text>
+  <text x="197" y="92" fill="#eee" font-size="11.5" font-weight="600">Partnership</text>
+  <text x="197" y="106" fill="#eee" font-size="11.5" font-weight="600">Complementarity</text>
+  <text x="197" y="123" fill="#888" font-size="10">Pair aggressive risk-takers</text>
+  <text x="197" y="137" fill="#888" font-size="10">with cautious, prudent</text>
+  <text x="197" y="151" fill="#888" font-size="10">counterparts for balance</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="349" y1="96" x2="369" y2="96" stroke="#ff6b4a" stroke-width="1.5" opacity="0.6" marker-end="url(#arr)"/>
+  <text x="349" y="92" fill="#888" font-size="10" text-anchor="start">risk↗</text>
+
+  <!-- Box 3: Positional Entrenchment (x=372, w=152) -->
+  <rect x="372" y="59" width="152" height="100" rx="4" fill="#1e2e2e" stroke="#253535" stroke-width="1.5"/>
+  <rect x="372" y="59" width="3" height="100" fill="#ff6b4a"/>
+  <text x="384" y="76" fill="#ff6b4a" font-size="10" font-weight="700" letter-spacing="0.8">OBSTACLE</text>
+  <text x="384" y="92" fill="#eee" font-size="11.5" font-weight="600">Positional</text>
+  <text x="384" y="106" fill="#eee" font-size="11.5" font-weight="600">Entrenchment</text>
+  <text x="384" y="123" fill="#888" font-size="10">Partner defends a stance</text>
+  <text x="384" y="137" fill="#888" font-size="10">instead of weighing</text>
+  <text x="384" y="151" fill="#888" font-size="10">evidence rationally</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="525" y1="96" x2="545" y2="96" stroke="#ff6b4a" stroke-width="1.5" opacity="0.6" marker-end="url(#arr)"/>
+  <text x="525" y="92" fill="#888" font-size="10">bypass</text>
+
+  <!-- Box 4: Skin in the Game (x=548, w=152) -->
+  <rect x="548" y="59" width="152" height="100" rx="4" fill="#1e2e2e" stroke="#253535" stroke-width="1.5"/>
+  <rect x="548" y="59" width="3" height="100" fill="#ff6b4a"/>
+  <text x="560" y="76" fill="#ff6b4a" font-size="10" font-weight="700" letter-spacing="0.8">TACTIC</text>
+  <text x="560" y="92" fill="#eee" font-size="11.5" font-weight="600">Skin in the Game</text>
+  <text x="560" y="112" fill="#888" font-size="10">Personally absorb the</text>
+  <text x="560" y="126" fill="#888" font-size="10">downside risk to unlock</text>
+  <text x="560" y="140" fill="#888" font-size="10">a resistant partner's</text>
+  <text x="560" y="154" fill="#888" font-size="10">approval &amp; commitment</text>
+
+  <!-- ── Diagonal arrows from row 1 down to outcome ── -->
+  <!-- B2 bottom-centre (x=267, y=159) → B5 top entry (~x=320, y=198) -->
+  <line x1="267" y1="160" x2="318" y2="198" stroke="#ff6b4a" stroke-width="1.5" opacity="0.5" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <!-- B4 bottom-centre (x=624, y=159) → B5 top entry (~x=470, y=198) -->
+  <line x1="624" y1="160" x2="472" y2="198" stroke="#ff6b4a" stroke-width="1.5" opacity="0.5" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+
+  <!-- OUTCOME label above box 5 -->
+  <text x="380" y="195" fill="#ff6b4a" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="middle">▼  GOVERNING NORM  ▼</text>
+
+  <!-- Box 5: Unanimous Consensus — OUTCOME (x=195, w=370) -->
+  <rect x="195" y="202" width="370" height="88" rx="4" fill="#1e2e2e" stroke="#ff6b4a" stroke-width="2"/>
+  <rect x="195" y="202" width="3" height="88" fill="#ff6b4a"/>
+  <text x="214" y="224" fill="#eee" font-size="14" font-weight="700">Unanimous Consensus</text>
+  <text x="214" y="246" fill="#888" font-size="11">Debate fully and patiently — every partner must agree</text>
+  <text x="214" y="261" fill="#888" font-size="11">before the group moves forward as a single unified will.</text>
+  <text x="214" y="279" fill="#888" font-size="10" font-style="italic">No fractured commitment. No silent dissent after the vote.</text>
+
+  <!-- Footer -->
+  <rect x="0" y="308" width="760" height="52" fill="#1e2e2e"/>
+  <rect x="0" y="308" width="3" height="52" fill="#ff6b4a"/>
+  <text x="16" y="326" fill="#888" font-size="10" font-weight="700" letter-spacing="1">ROCKEFELLER'S INSIGHT</text>
+  <text x="16" y="346" fill="#eee" font-size="11">"Friendships grown out of business are often stronger than those that precede it."  — John D. Rockefeller</text>
+</svg></div>
+  <div class="ch-summary"><p>Chapter 1 of John D. Rockefeller&#39;s &#39;Random Reminiscences of Men and Events&#39; is an intimate portrait of the human relationships that Rockefeller credits as the foundation of his business success. Rather than presenting a systematic account of strategy or finance, Rockefeller opens by insisting that what stands out most vividly in his memory are the people—his partners, associates, and friends—and the qualities that made them extraordinary. He frames this not as modesty but as a genuine belief that great enterprises are built by groups of complementary personalities, not by any single genius.</p><p>The chapter introduces two key figures in detail. John D. Archbold, later a vice-president of Standard Oil, is remembered first for his youthful bravado—signing a hotel register with the slogan &#39;$4.00 a bbl.&#39; when crude oil sold for far less—and then for a lifelong capacity for hard work and humor. Henry M. Flagler is portrayed as the quintessential aggressive partner: always pushing forward, always wanting to build bigger and faster. Rockefeller traces how their friendship grew from a simple business relationship in Cleveland into a decades-long daily collaboration, walking to and from the office together, thinking aloud on those walks, and drafting the contracts that would underpin a vast enterprise.</p><p>A central anecdote—labeled &#39;Arguments vs. Capital&#39;—illustrates Rockefeller&#39;s theory of persuasion. When a conservative senior partner repeatedly refused to approve a $3 million capital improvement, no logical argument could move him; he had stopped weighing evidence and was merely defending a position. The breakthrough came when Rockefeller offered to personally absorb the loss if the investment failed. This act of skin-in-the-game dissolved the partner&#39;s resistance instantly. Rockefeller draws a broader lesson: once a person is cornered into defending a stance, reason alone cannot reach them—only a gesture that changes the emotional and financial stakes can reopen the conversation.</p><p>The chapter also reflects on the perpetual tension inside any growing organization between conservative partners (who have the most to lose and therefore move slowly) and aggressive ones (who are usually younger and push for rapid expansion). Rockefeller describes the Standard Oil decision-making process as a prolonged, patient deliberation that always ended in a unanimous vote—never as fast as the daring wing wanted, never as cautious as the conservative wing preferred, but always consensual. This culture of frank, patient argument followed by unified action is presented as a core organizational principle.</p><p>Underpinning everything is Rockefeller&#39;s thesis that business friendships—partnerships grown out of shared work rather than prior personal affection—are the most durable and productive kind. Flagler himself articulated this: &#39;a friendship founded on business is a good deal better than a business founded on friendship.&#39; The chapter is thus less a history of oil than a meditation on trust, complementarity, and the human architecture of a great institution.</p></div>
+  <div class="quotes"><blockquote>It&#39;s a pity to get a man into a place in an argument where he is defending a position instead of considering the evidence. His calm judgment is apt to leave him, and his mind is for the time being closed, and only obstinacy remains.</blockquote><blockquote>I&#39;ll take it, and supply this capital myself. If the expenditure turns out to be profitable the company can repay me; and, if it goes wrong, I&#39;ll stand the loss.</blockquote><blockquote>It was a friendship founded on business, which Mr. Flagler used to say was a good deal better than a business founded on friendship, and my experience leads me to agree with him.</blockquote></div>
+</section>
+<section id="ch_2" data-concepts="self_help_principle,organized_philanthropy,civilizational_framework,cooperative_giving,root_cause_investment" class="ch-section">
+  <span class="part-label">Part [ 02 ]</span>
+  <div class="ch-header">
+    <h2>Chapter 2</h2>
+    <span class="coverage-label">Core Argument</span>
+  </div>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" style="width:100%;font-family:'Inter',sans-serif">
+  <rect width="760" height="360" fill="#182828"/>
+
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#ff6b4a"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <rect x="10" y="8" width="740" height="54" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="10" y="8" width="4" height="54" fill="#ff6b4a"/>
+  <text x="24" y="29" font-size="13" font-weight="700" fill="#eee">CHAPTER 2 · The Philosophy of Scientific Giving</text>
+  <text x="24" y="48" font-size="10" fill="#888">Root-cause investment — not symptomatic relief — creates lasting civilizational progress</text>
+
+  <!-- Cycle label -->
+  <text x="380" y="74" text-anchor="middle" font-size="8" fill="#555" letter-spacing="3">VIRTUOUS CYCLE</text>
+
+  <!-- Center hub -->
+  <circle cx="380" cy="185" r="33" fill="#1e2e2e" stroke="#ff6b4a" stroke-width="1.5"/>
+  <text x="380" y="181" text-anchor="middle" font-size="8" font-weight="700" fill="#ff6b4a">SCIENTIFIC</text>
+  <text x="380" y="193" text-anchor="middle" font-size="8" font-weight="700" fill="#ff6b4a">PHILANTHROPY</text>
+
+  <!-- Arrow N0 → N1: requires -->
+  <path d="M424,95 Q453,108 457,132" stroke="#ff6b4a" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.75"/>
+  <text x="456" y="109" text-anchor="middle" font-size="8" fill="#666">requires</text>
+
+  <!-- Arrow N1 → N2: exemplifies -->
+  <path d="M467,176 Q463,210 453,244" stroke="#ff6b4a" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.75"/>
+  <text x="477" y="214" text-anchor="start" font-size="8" fill="#666">exemplifies</text>
+
+  <!-- Arrow N2 → N3: guides -->
+  <path d="M395,267 Q380,277 365,267" stroke="#ff6b4a" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.75"/>
+  <text x="380" y="285" text-anchor="middle" font-size="8" fill="#666">guides</text>
+
+  <!-- Arrow N3 → N4: builds on -->
+  <path d="M302,244 Q294,210 294,176" stroke="#ff6b4a" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.75"/>
+  <text x="283" y="214" text-anchor="end" font-size="8" fill="#666">builds on</text>
+
+  <!-- Arrow N4 → N0: scales -->
+  <path d="M317,132 Q328,114 344,108" stroke="#ff6b4a" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.75"/>
+  <text x="320" y="115" text-anchor="end" font-size="8" fill="#666">scales</text>
+
+  <!-- NODE 0: Self-Help Principle (top) -->
+  <rect x="336" y="63" width="88" height="44" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="336" y="63" width="88" height="3" fill="#ff6b4a"/>
+  <text x="380" y="80" text-anchor="middle" font-size="10" font-weight="700" fill="#eee">Self-Help</text>
+  <text x="380" y="93" text-anchor="middle" font-size="9" fill="#888">Principle</text>
+
+  <!-- NODE 1: Root-Cause Investment (top-right) -->
+  <rect x="431" y="132" width="88" height="44" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="431" y="132" width="88" height="3" fill="#ff6b4a"/>
+  <text x="475" y="149" text-anchor="middle" font-size="10" font-weight="700" fill="#eee">Root-Cause</text>
+  <text x="475" y="162" text-anchor="middle" font-size="9" fill="#888">Investment</text>
+
+  <!-- NODE 2: Civilizational Framework (bottom-right) -->
+  <rect x="395" y="244" width="90" height="44" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="395" y="244" width="90" height="3" fill="#ff6b4a"/>
+  <text x="440" y="261" text-anchor="middle" font-size="10" font-weight="700" fill="#eee">Civilizational</text>
+  <text x="440" y="274" text-anchor="middle" font-size="9" fill="#888">Framework</text>
+
+  <!-- NODE 3: Organized Philanthropy (bottom-left) -->
+  <rect x="275" y="244" width="90" height="44" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="275" y="244" width="90" height="3" fill="#ff6b4a"/>
+  <text x="320" y="261" text-anchor="middle" font-size="10" font-weight="700" fill="#eee">Organized</text>
+  <text x="320" y="274" text-anchor="middle" font-size="9" fill="#888">Philanthropy</text>
+
+  <!-- NODE 4: Cooperative Giving (top-left) -->
+  <rect x="241" y="132" width="88" height="44" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="241" y="132" width="88" height="3" fill="#ff6b4a"/>
+  <text x="285" y="149" text-anchor="middle" font-size="10" font-weight="700" fill="#eee">Cooperative</text>
+  <text x="285" y="162" text-anchor="middle" font-size="9" fill="#888">Giving</text>
+
+  <!-- Footer -->
+  <rect x="10" y="300" width="740" height="52" rx="3" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="10" y="300" width="4" height="52" fill="#ff6b4a"/>
+  <text x="24" y="317" font-size="8" fill="#555" letter-spacing="2">KEY INSIGHT</text>
+  <text x="24" y="333" font-size="11" font-style="italic" fill="#eee">"The only lasting benefit one can confer on another is to help that person help themselves."</text>
+  <text x="24" y="347" font-size="9" fill="#888">Carrel's transfusion parable: foundational research yields outsized, unpredictable dividends for humanity</text>
+</svg></div>
+  <div class="ch-summary"><p>Chapter 2 opens with a vivid account of an experimental blood transfusion performed by Dr. Alexis Carrel on a dying infant, used as a parable: just as medicine advances by funding basic research whose applications cannot be predicted, philanthropy must invest in root causes rather than surface symptoms. The surgical story is not decoration—it is the author&#39;s proof of concept that organized, scientific investment in foundational knowledge yields outsized, unpredictable dividends for humanity.</p><p>The chapter&#39;s central philosophical claim is that the only lasting benefit one person can confer on another is to help them help themselves. Charity that substitutes for individual effort is, in the author&#39;s view, actively harmful—analogous to a disease that weakens the body&#39;s own immune defenses rather than strengthening them. This is not a rejection of generosity but a redefinition of it: true giving targets the conditions that allow self-improvement, not the relief of immediate distress.</p><p>From this premise, the author derives a framework for civilizational progress broken into six ascending layers—subsistence, law and government, literature, science, art, and morality—arguing that material abundance is the foundation on which all higher goods rest. Philanthropy should therefore be mapped onto this framework deliberately, funding each layer in proportion to its leverage on human flourishing, rather than responding ad hoc to whoever happens to knock on the door.</p><p>The practical consequence of this theory is a case for combination and cooperation in giving, modeled explicitly on the efficiency gains of industrial consolidation. Just as a trust eliminates redundant effort in commerce, a coordinated philanthropic body can study the entire field, identify gaps that no individual donor would notice, and create institutions where none exist. The General Education Board, with Andrew Carnegie as a member, is cited as a working example of this principle.</p><p>The chapter closes by anchoring the abstract framework in personal practice: family dinner-table discussions of philanthropic correspondence, the training of children to share in giving decisions, and the assembly of doctors, lawyers, and clergymen as unpaid advisors. Organization, the author insists, is not a bureaucratic luxury but a moral obligation—without it, well-meaning generosity dissipates into waste, just as uncoordinated capital dissipates into inefficiency.</p></div>
+  <div class="quotes"><blockquote>The only thing which is of lasting benefit to a man is that which he does for himself. Money which comes to him without effort on his part is seldom a benefit and often a curse.</blockquote><blockquote>There was then forced upon me the necessity to organize and plan this department of our daily tasks on as distinct lines of progress as we did our business affairs.</blockquote><blockquote>We have not been satisfied with giving to causes which have appealed to us. We have felt that the mere fact that this or the other cause makes its appeal is no reason why we should give to it any more than to a thousand other causes, perhaps more worthy, which do not happen to have come under our eye.</blockquote></div>
+</section>
+<section id="ch_3" data-concepts="public_domain,project_gutenberg_license,pglaf,trademark_protection,digital_distribution" class="ch-section">
+  <span class="part-label">Part [ 03 ]</span>
+  <div class="ch-header">
+    <h2>Chapter 3</h2>
+    <span class="coverage-label">Reference</span>
+  </div>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" style="width:100%;font-family:'Inter',sans-serif">
+  <rect width="760" height="360" fill="#182828"/>
+
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#ff6b4a"/>
+    </marker>
+    <marker id="arrg" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <rect x="10" y="10" width="740" height="52" rx="2" fill="#1e2e2e"/>
+  <rect x="10" y="10" width="4" height="52" fill="#ff6b4a"/>
+  <text x="24" y="33" font-size="13" font-weight="700" fill="#eee">Chapter 3 — PG Legal Framework</text>
+  <text x="24" y="51" font-size="10" fill="#888">How public domain, licensing, and trademark combine to enable free digital distribution</text>
+
+  <!-- Column labels -->
+  <text x="95" y="77" font-size="9" font-weight="700" fill="#555" text-anchor="middle" letter-spacing="1">FORCES</text>
+  <text x="379" y="77" font-size="9" font-weight="700" fill="#555" text-anchor="middle" letter-spacing="1">MECHANISMS</text>
+  <text x="647" y="77" font-size="9" font-weight="700" fill="#555" text-anchor="middle" letter-spacing="1">OUTCOME</text>
+
+  <!-- Col 1: Public Domain -->
+  <rect x="15" y="82" width="160" height="86" rx="2" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="15" y="82" width="3" height="86" fill="#ff6b4a"/>
+  <text x="27" y="99" font-size="10" font-weight="700" fill="#ff6b4a">PUBLIC DOMAIN</text>
+  <text x="27" y="114" font-size="10" fill="#888">Works free of copyright</text>
+  <text x="27" y="128" font-size="10" fill="#888">— copy, distribute,</text>
+  <text x="27" y="142" font-size="10" fill="#888">modify without payment</text>
+  <text x="27" y="156" font-size="10" fill="#888">or permission</text>
+
+  <!-- Col 1: PGLAF -->
+  <rect x="15" y="184" width="160" height="86" rx="2" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="15" y="184" width="3" height="86" fill="#ff6b4a"/>
+  <text x="27" y="201" font-size="10" font-weight="700" fill="#ff6b4a">PGLAF</text>
+  <text x="27" y="216" font-size="10" fill="#888">Nonprofit 501(c)(3)</text>
+  <text x="27" y="230" font-size="10" fill="#888">sustaining PG through</text>
+  <text x="27" y="244" font-size="10" fill="#888">donations and grants</text>
+  <text x="27" y="258" font-size="10" fill="#888">from users worldwide</text>
+
+  <!-- Col 2: PG License -->
+  <rect x="293" y="82" width="172" height="86" rx="2" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="293" y="82" width="3" height="86" fill="#ff6b4a"/>
+  <text x="305" y="99" font-size="10" font-weight="700" fill="#ff6b4a">PG LICENSE</text>
+  <text x="305" y="114" font-size="10" fill="#888">Free redistribution OK;</text>
+  <text x="305" y="128" font-size="10" fill="#888">commercial use needs</text>
+  <text x="305" y="142" font-size="10" fill="#888">royalty agreement</text>
+  <text x="305" y="156" font-size="10" fill="#888">with PGLAF</text>
+
+  <!-- Col 2: Trademark -->
+  <rect x="293" y="184" width="172" height="86" rx="2" fill="#1e2e2e" stroke="#253535" stroke-width="1"/>
+  <rect x="293" y="184" width="3" height="86" fill="#ff6b4a"/>
+  <text x="305" y="201" font-size="10" font-weight="700" fill="#ff6b4a">TRADEMARK</text>
+  <text x="305" y="216" font-size="10" fill="#888">Controls "Project</text>
+  <text x="305" y="230" font-size="10" fill="#888">Gutenberg" name even</text>
+  <text x="305" y="244" font-size="10" fill="#888">when text is public</text>
+  <text x="305" y="258" font-size="10" fill="#888">domain</text>
+
+  <!-- Col 3: Digital Distribution (outcome) -->
+  <rect x="550" y="112" width="196" height="128" rx="2" fill="#1e2e2e" stroke="#ff6b4a" stroke-width="1.5"/>
+  <rect x="550" y="112" width="3" height="128" fill="#ff6b4a"/>
+  <text x="562" y="133" font-size="12" font-weight="700" fill="#ff6b4a">DIGITAL</text>
+  <text x="562" y="149" font-size="12" font-weight="700" fill="#ff6b4a">DISTRIBUTION</text>
+  <line x1="562" y1="156" x2="732" y2="156" stroke="#253535" stroke-width="1"/>
+  <text x="562" y="172" font-size="10" fill="#888">Free machine-readable</text>
+  <text x="562" y="186" font-size="10" fill="#888">access on any device</text>
+  <text x="562" y="200" font-size="10" fill="#888">including outdated</text>
+  <text x="562" y="214" font-size="10" fill="#888">hardware — for all</text>
+  <text x="562" y="232" font-size="10" font-weight="700" fill="#eee">► The Mission</text>
+
+  <!-- Arrow: Public Domain -> PG License -->
+  <line x1="175" y1="120" x2="291" y2="120" stroke="#ff6b4a" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="233" y="115" font-size="9" fill="#ff6b4a" text-anchor="middle">enables</text>
+
+  <!-- Arrow: PG License -> Trademark (vertical) -->
+  <line x1="379" y1="168" x2="379" y2="182" stroke="#ff6b4a" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- Arrow: Trademark -> PG License (cycle arc, left side) -->
+  <path d="M293 222 Q265 175 293 130" stroke="#444" stroke-width="1" fill="none" stroke-dasharray="3,2" marker-end="url(#arrg)"/>
+  <text x="243" y="179" font-size="9" fill="#555" text-anchor="middle">requires</text>
+
+  <!-- Arrow: PG License -> Digital Distribution -->
+  <line x1="465" y1="130" x2="548" y2="155" stroke="#ff6b4a" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- Arrow: Trademark -> Digital Distribution -->
+  <line x1="465" y1="222" x2="548" y2="213" stroke="#ff6b4a" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- Arrow: PGLAF -> Digital Distribution (curved below) -->
+  <path d="M175 227 Q362 290 548 216" stroke="#ff6b4a" stroke-width="1.3" fill="none" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+  <text x="352" y="288" font-size="9" fill="#888" text-anchor="middle">funds</text>
+
+  <!-- Footer -->
+  <rect x="10" y="306" width="740" height="46" rx="2" fill="#1e2e2e"/>
+  <rect x="10" y="306" width="4" height="46" fill="#ff6b4a"/>
+  <text x="24" y="323" font-size="9" font-weight="700" fill="#555" letter-spacing="1">KEY TAKEAWAY</text>
+  <text x="24" y="338" font-size="10" fill="#888">"The trademark persists where copyright ends — free text, controlled name: the legal backbone</text>
+  <text x="24" y="351" font-size="10" fill="#888">sustaining open digital archives for all through the Project Gutenberg License."</text>
+</svg></div>
+  <div class="ch-summary"><p>The content retrieved for Chapter 3 consists entirely of Project Gutenberg boilerplate — the standard license agreement, foundation information, and donation appeals appended to public domain eBooks. This is not a substantive chapter of the book itself, but rather legal and administrative text that accompanies the digital edition. It explains the terms under which the eBook may be copied, distributed, and modified, distinguishing between works in the public domain and those requiring permission.</p><p>The Project Gutenberg License establishes a framework for free redistribution: users may do almost anything with the text in the United States without cost, provided they keep the Project Gutenberg trademark notice attached. Commercial redistribution requires a 20% royalty on gross profits paid to the Project Gutenberg Literary Archive Foundation, a 501(c)(3) nonprofit incorporated in Mississippi.</p><p>The Foundation&#39;s mission is to digitize and freely distribute works no longer protected by copyright, making literature accessible on the widest range of computing devices, including obsolete hardware. It was founded in 2001 to give the project long-term institutional stability after decades of volunteer-only operation under Professor Michael S. Hart, the originator of the concept.</p><p>This material is not part of the book&#39;s intellectual content. Based on the table of contents visible in Chapter 1 passages, the actual Chapter 3 of this book — &#39;Random Reminiscences of Men and Events&#39; by John D. Rockefeller — is titled &#39;The Standard Oil Company&#39; and begins on page 55 of the print edition. The RAG retrieval did not surface substantive passages from that chapter.</p></div>
+  <div class="quotes"><blockquote>Project Gutenberg™ depends upon and cannot survive without widespread public support and donations to carry out its mission of increasing the number of public domain and licensed works that can be freely distributed in machine-readable form accessible by the widest array of equipment including outdated equipment.</blockquote><blockquote>Professor Michael S. Hart was the originator of the Project Gutenberg concept of a library of electronic works that could be freely shared with anyone.</blockquote><blockquote>Nearly all the individual works in the collection are in the public domain in the United States.</blockquote></div>
+</section>
+
+<div id="kg-wrap">
+  <span class="part-label">Part [ 03 ] — Concept Map</span>
+  <div class="kg-head">
+    <div class="kg-copy">
+      <h2>Knowledge Graph</h2>
+      <p>Click a node to highlight chapters. Drag to pan, scroll to zoom, or use the controls.</p>
+    </div>
+    <div class="kg-controls">
+      <button class="kg-btn" id="kg-zoom-out" type="button">−</button>
+      <button class="kg-btn" id="kg-reset" type="button">Reset</button>
+      <button class="kg-btn" id="kg-zoom-in" type="button">+</button>
+    </div>
+  </div>
+  <div class="kg-frame">
+    <svg id="kg-svg"></svg>
+  </div>
+</div>
+
+<div class="export-wrap">
+  <button class="export-btn" id="export-btn">Download summary.md</button>
+</div>
+
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.06 });
+document.querySelectorAll('.ch-section').forEach(el => io.observe(el));
+
+const MD = "# Random Reminiscences of Men and Events\n**Author:** John D. Rockefeller\n\n## Central Claim\n\nJohn D. Rockefeller argues across memoir, philanthropy, and business history that lasting achievement — whether building a company or relieving suffering — demands the same core disciplines: systematic method over impulse, voluntary cooperation over coercion, character over argument, and long-term construction over short-term gain. The individual who internalizes these principles can act effectively in commerce and charity alike, because both domains are ultimately expressions of the same rational, moral, and organizational intelligence.\n\n## Book Summary\n\nRockefeller opens his memoirs not with a balance sheet but with faces — the partners, friends, and colleagues whose character made Standard Oil possible. This framing is a thesis statement: business success is a human achievement before it is a financial one. The quality of long-term partnerships, the willingness to absorb personal risk rather than merely argue for an idea, and the patient practice of unanimous consensus before acting — these are presented as the actual load-bearing pillars of the enterprise, more durable than any single strategy or market advantage.\n\nThe founding and growth of Standard Oil is explained not as predatory monopoly but as an act of industrial rescue. The early oil refining industry was in freefall — prices collapsed, firms undercut one another into ruin, and the entire sector was structurally unstable. Rockefeller's answer was consolidation: merging competing refineries into a single cooperative organism that could eliminate waste, stabilize prices, and plan at scale. He frames this not as domination but as the application of the cooperative principle, the same logic by which partners pool judgment rather than compete against one another.\n\nEconomies of scale were the mechanical reward for consolidation: centralized purchasing, unified logistics, and shared infrastructure allowed Standard Oil to produce at costs that smaller rivals could not match. The Trust structure was the legal instrument that made unified ownership possible across state lines, translating the cooperative principle into a durable organizational form. Rockefeller insists throughout that market stability — predictable prices and reliable supply — was the public benefit that justified the entire architecture.\n\nChapter Two pivots from commerce to charity, but the argumentative structure is identical. Effective giving, like effective surgery, requires systematic prior preparation rather than emotional reaction. Rockefeller uses the story of Dr. Alexis Carrel — whose years of animal experiments made a midnight infant blood transfusion possible — as an emblem: scientific preparation is what transforms impossible crises into solvable problems. Impulse-driven charity is waste; organized giving, guided by a rational taxonomy of civilization's needs, is the only form that produces lasting improvement.\n\nThe principle of self-help as true aid runs through the philanthropy chapters as the cooperative principle runs through the business chapters: just as voluntary coordination among firms serves the public better than coercive dominance, charitable aid that develops a recipient's own capacities serves humanity better than direct material transfer. The University of Chicago's emphasis on research is praised for exactly this reason — it produces the capacity to solve problems rather than merely palliating their symptoms.\n\nWaste reduction is the connective tissue linking the two halves of the book. In industry, waste is inefficiency — redundant production, ruinous price wars, duplicated logistics. In philanthropy, waste is misdirected sentiment — giving that soothes the donor's conscience without improving the recipient's condition. Both are solved by the same remedy: combination, method, and the willingness to study cause rather than treat effect. The sectarian walls dividing charities are as irrational as the competing refineries — cooperation multiplies impact in both cases.\n\nThe deeper argument is that character and method are not opposites but complements. Character — demonstrated through personal sacrifice, skin in the game, and conscience — is what makes partnerships trustworthy and institutions durable. Method — systematic planning, research, measurable goals — is what makes effort effective. Rockefeller's memoirs are an extended case that the person of good character who also disciplines themselves to act with rigorous method is the agent of genuine civilization, in business and in benevolence alike.\n\n---\n\n## Chapter Summaries\n\n### Chapter 1\n*Coverage: illustrative*\n\nChapter 1 of John D. Rockefeller's 'Random Reminiscences of Men and Events' is an intimate portrait of the human relationships that Rockefeller credits as the foundation of his business success. Rather than presenting a systematic account of strategy or finance, Rockefeller opens by insisting that what stands out most vividly in his memory are the people—his partners, associates, and friends—and the qualities that made them extraordinary. He frames this not as modesty but as a genuine belief that great enterprises are built by groups of complementary personalities, not by any single genius.\n\nThe chapter introduces two key figures in detail. John D. Archbold, later a vice-president of Standard Oil, is remembered first for his youthful bravado—signing a hotel register with the slogan '$4.00 a bbl.' when crude oil sold for far less—and then for a lifelong capacity for hard work and humor. Henry M. Flagler is portrayed as the quintessential aggressive partner: always pushing forward, always wanting to build bigger and faster. Rockefeller traces how their friendship grew from a simple business relationship in Cleveland into a decades-long daily collaboration, walking to and from the office together, thinking aloud on those walks, and drafting the contracts that would underpin a vast enterprise.\n\nA central anecdote—labeled 'Arguments vs. Capital'—illustrates Rockefeller's theory of persuasion. When a conservative senior partner repeatedly refused to approve a $3 million capital improvement, no logical argument could move him; he had stopped weighing evidence and was merely defending a position. The breakthrough came when Rockefeller offered to personally absorb the loss if the investment failed. This act of skin-in-the-game dissolved the partner's resistance instantly. Rockefeller draws a broader lesson: once a person is cornered into defending a stance, reason alone cannot reach them—only a gesture that changes the emotional and financial stakes can reopen the conversation.\n\nThe chapter also reflects on the perpetual tension inside any growing organization between conservative partners (who have the most to lose and therefore move slowly) and aggressive ones (who are usually younger and push for rapid expansion). Rockefeller describes the Standard Oil decision-making process as a prolonged, patient deliberation that always ended in a unanimous vote—never as fast as the daring wing wanted, never as cautious as the conservative wing preferred, but always consensual. This culture of frank, patient argument followed by unified action is presented as a core organizational principle.\n\nUnderpinning everything is Rockefeller's thesis that business friendships—partnerships grown out of shared work rather than prior personal affection—are the most durable and productive kind. Flagler himself articulated this: 'a friendship founded on business is a good deal better than a business founded on friendship.' The chapter is thus less a history of oil than a meditation on trust, complementarity, and the human architecture of a great institution.\n\n**Key Quotes:**\n\n> It's a pity to get a man into a place in an argument where he is defending a position instead of considering the evidence. His calm judgment is apt to leave him, and his mind is for the time being closed, and only obstinacy remains.\n\n> I'll take it, and supply this capital myself. If the expenditure turns out to be profitable the company can repay me; and, if it goes wrong, I'll stand the loss.\n\n> It was a friendship founded on business, which Mr. Flagler used to say was a good deal better than a business founded on friendship, and my experience leads me to agree with him.\n\n\n### Chapter 2\n*Coverage: core_argument*\n\nChapter 2 opens with a vivid account of an experimental blood transfusion performed by Dr. Alexis Carrel on a dying infant, used as a parable: just as medicine advances by funding basic research whose applications cannot be predicted, philanthropy must invest in root causes rather than surface symptoms. The surgical story is not decoration—it is the author's proof of concept that organized, scientific investment in foundational knowledge yields outsized, unpredictable dividends for humanity.\n\nThe chapter's central philosophical claim is that the only lasting benefit one person can confer on another is to help them help themselves. Charity that substitutes for individual effort is, in the author's view, actively harmful—analogous to a disease that weakens the body's own immune defenses rather than strengthening them. This is not a rejection of generosity but a redefinition of it: true giving targets the conditions that allow self-improvement, not the relief of immediate distress.\n\nFrom this premise, the author derives a framework for civilizational progress broken into six ascending layers—subsistence, law and government, literature, science, art, and morality—arguing that material abundance is the foundation on which all higher goods rest. Philanthropy should therefore be mapped onto this framework deliberately, funding each layer in proportion to its leverage on human flourishing, rather than responding ad hoc to whoever happens to knock on the door.\n\nThe practical consequence of this theory is a case for combination and cooperation in giving, modeled explicitly on the efficiency gains of industrial consolidation. Just as a trust eliminates redundant effort in commerce, a coordinated philanthropic body can study the entire field, identify gaps that no individual donor would notice, and create institutions where none exist. The General Education Board, with Andrew Carnegie as a member, is cited as a working example of this principle.\n\nThe chapter closes by anchoring the abstract framework in personal practice: family dinner-table discussions of philanthropic correspondence, the training of children to share in giving decisions, and the assembly of doctors, lawyers, and clergymen as unpaid advisors. Organization, the author insists, is not a bureaucratic luxury but a moral obligation—without it, well-meaning generosity dissipates into waste, just as uncoordinated capital dissipates into inefficiency.\n\n**Key Quotes:**\n\n> The only thing which is of lasting benefit to a man is that which he does for himself. Money which comes to him without effort on his part is seldom a benefit and often a curse.\n\n> There was then forced upon me the necessity to organize and plan this department of our daily tasks on as distinct lines of progress as we did our business affairs.\n\n> We have not been satisfied with giving to causes which have appealed to us. We have felt that the mere fact that this or the other cause makes its appeal is no reason why we should give to it any more than to a thousand other causes, perhaps more worthy, which do not happen to have come under our eye.\n\n\n### Chapter 3\n*Coverage: reference*\n\nThe content retrieved for Chapter 3 consists entirely of Project Gutenberg boilerplate — the standard license agreement, foundation information, and donation appeals appended to public domain eBooks. This is not a substantive chapter of the book itself, but rather legal and administrative text that accompanies the digital edition. It explains the terms under which the eBook may be copied, distributed, and modified, distinguishing between works in the public domain and those requiring permission.\n\nThe Project Gutenberg License establishes a framework for free redistribution: users may do almost anything with the text in the United States without cost, provided they keep the Project Gutenberg trademark notice attached. Commercial redistribution requires a 20% royalty on gross profits paid to the Project Gutenberg Literary Archive Foundation, a 501(c)(3) nonprofit incorporated in Mississippi.\n\nThe Foundation's mission is to digitize and freely distribute works no longer protected by copyright, making literature accessible on the widest range of computing devices, including obsolete hardware. It was founded in 2001 to give the project long-term institutional stability after decades of volunteer-only operation under Professor Michael S. Hart, the originator of the concept.\n\nThis material is not part of the book's intellectual content. Based on the table of contents visible in Chapter 1 passages, the actual Chapter 3 of this book — 'Random Reminiscences of Men and Events' by John D. Rockefeller — is titled 'The Standard Oil Company' and begins on page 55 of the print edition. The RAG retrieval did not surface substantive passages from that chapter.\n\n**Key Quotes:**\n\n> Project Gutenberg™ depends upon and cannot survive without widespread public support and donations to carry out its mission of increasing the number of public domain and licensed works that can be freely distributed in machine-readable form accessible by the widest array of equipment including outdated equipment.\n\n> Professor Michael S. Hart was the originator of the Project Gutenberg concept of a library of electronic works that could be freely shared with anyone.\n\n> Nearly all the individual works in the collection are in the public domain in the United States.\n\n";
+document.getElementById('export-btn').addEventListener('click', () => {
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(new Blob([MD],{type:'text/markdown'})),
+    download:'summary.md'
+  });
+  a.click();
+});
+
+window.addEventListener('load', function(){
+  const data = {"nodes":[{"id":"partnership_as_foundation","label":"Partnership as Foundation","description":"The belief that durable enterprise is built on the quality and character of long-term human partnerships rather than on capital or strategy alone.","chapters":[1]},{"id":"skin_in_the_game","label":"Skin in the Game","description":"The principle that absorbing personal financial risk is more persuasive than rational argument when moving a resistant decision-maker.","chapters":[1]},{"id":"unanimous_consensus","label":"Unanimous Consensus","description":"Rockefeller's management philosophy of debating openly and patiently until every partner agrees, rather than forcing decisions through majority rule.","chapters":[1]},{"id":"building_for_permanence","label":"Building for Permanence","description":"The insistence on constructing solid, high-quality infrastructure even under uncertainty, treating the enterprise as if it will last rather than as a temporary speculation.","chapters":[1,3]},{"id":"character_over_argument","label":"Character over Argument","description":"The idea that demonstrated values — conscience, loyalty, personal sacrifice — carry more persuasive and institutional weight than logical reasoning alone.","chapters":[1,2]},{"id":"personal_sacrifice","label":"Personal Sacrifice","description":"The act of absorbing cost or risk oneself rather than offloading it, used as proof of genuine commitment and moral seriousness.","chapters":[1,2]},{"id":"human_relationships","label":"Human Relationships","description":"The web of personal connections, loyalties, and character judgments that Rockefeller treats as the actual substrate of business achievement.","chapters":[1]},{"id":"long_term_thinking","label":"Long-Term Thinking","description":"The disposition to plan and build for permanence rather than short-term gain, applied equally to business infrastructure and charitable impact.","chapters":[1,2,3]},{"id":"self_help_as_true_aid","label":"Self-Help as True Aid","description":"The belief that lasting benefit comes only from enabling individuals to develop their own capacities, not from direct material transfers.","chapters":[2]},{"id":"organized_giving","label":"Organized Giving","description":"Treating charitable work with the same deliberate planning, defined principles, and measurable goals as a business enterprise.","chapters":[2]},{"id":"elements_of_civilization","label":"Elements of Civilization","description":"A six-part taxonomy (subsistence, law, literature, science, art, morality) used to rationally direct philanthropic and investment decisions.","chapters":[2]},{"id":"combination_in_charity","label":"Combination in Charity","description":"Applying the industrial principle of cooperative combination to philanthropy to reduce waste, eliminate duplication, and multiply impact.","chapters":[2,3]},{"id":"scientific_preparation","label":"Scientific Preparation","description":"The idea that systematic prior research and experimentation — like Carrel's surgical experiments — is what makes effective aid or action possible at all.","chapters":[2]},{"id":"research_and_method","label":"Research and Method","description":"The commitment to studying cause rather than treating effect, embodied in the University of Chicago's emphasis on research over mere instruction.","chapters":[2]},{"id":"philanthropic_efficiency","label":"Philanthropic Efficiency","description":"The measurable ratio of charitable impact to resources expended, treated as a moral obligation rather than a bureaucratic metric.","chapters":[2]},{"id":"sectarian_walls","label":"Sectarian Division","description":"The fragmentation of charitable effort along religious and institutional lines, which Rockefeller treats as irrational waste analogous to ruinous price competition.","chapters":[2]},{"id":"industrial_consolidation","label":"Industrial Consolidation","description":"The process of merging competing firms into a unified enterprise to eliminate destructive price competition and achieve operational efficiency.","chapters":[3]},{"id":"economies_of_scale","label":"Economies of Scale","description":"Cost advantages gained when a large organization centralizes purchasing, production, and logistics, producing at lower per-unit cost than smaller rivals.","chapters":[3]},{"id":"cooperative_principle","label":"The Cooperative Principle","description":"Rockefeller's core belief that voluntary coordination among competitors or partners serves the public interest better than unrestrained rivalry.","chapters":[1,2,3]},{"id":"market_stability","label":"Market Stability","description":"A condition in which prices and supply are predictable enough for producers and consumers to plan reliably, treated as a prerequisite for industrial progress.","chapters":[3]},{"id":"trust_structure","label":"The Trust Structure","description":"The legal and organizational form Standard Oil used to unify formerly independent refineries under shared ownership and management across state lines.","chapters":[3]},{"id":"price_competition","label":"Destructive Price Competition","description":"The ruinous dynamic in which rivals undercut one another below cost, destabilizing the entire industry and harming producers and consumers alike.","chapters":[3]},{"id":"waste_reduction","label":"Waste Reduction","description":"The elimination of redundancy, inefficiency, and misdirected effort — the shared goal of consolidation in industry and organization in philanthropy.","chapters":[2,3]},{"id":"voluntary_coordination","label":"Voluntary Coordination","description":"The principle that cooperation entered into freely by parties — rather than enforced by coercion — produces more durable and legitimate institutions.","chapters":[1,2,3]},{"id":"institutional_character","label":"Institutional Character","description":"The aggregate moral quality of an organization, built up from the demonstrated values of its individual members over time.","chapters":[1,2]},{"id":"systematic_planning","label":"Systematic Planning","description":"The discipline of defining principles, setting measurable goals, and sequencing action deliberately before committing resources.","chapters":[2,3]}],"edges":[{"from":"human_relationships","to":"partnership_as_foundation","label":"forms the basis of"},{"from":"partnership_as_foundation","to":"character_over_argument","label":"depends on"},{"from":"personal_sacrifice","to":"skin_in_the_game","label":"expresses"},{"from":"skin_in_the_game","to":"character_over_argument","label":"demonstrates"},{"from":"unanimous_consensus","to":"partnership_as_foundation","label":"strengthens"},{"from":"unanimous_consensus","to":"voluntary_coordination","label":"operationalizes"},{"from":"building_for_permanence","to":"long_term_thinking","label":"embodies"},{"from":"character_over_argument","to":"institutional_character","label":"accumulates into"},{"from":"institutional_character","to":"long_term_thinking","label":"sustains"},{"from":"cooperative_principle","to":"voluntary_coordination","label":"is grounded in"},{"from":"cooperative_principle","to":"industrial_consolidation","label":"justifies"},{"from":"cooperative_principle","to":"combination_in_charity","label":"is analogously applied in"},{"from":"industrial_consolidation","to":"trust_structure","label":"implemented through"},{"from":"industrial_consolidation","to":"economies_of_scale","label":"enables"},{"from":"industrial_consolidation","to":"price_competition","label":"eliminates"},{"from":"price_competition","to":"market_stability","label":"threatens"},{"from":"economies_of_scale","to":"waste_reduction","label":"achieves"},{"from":"economies_of_scale","to":"market_stability","label":"contributes to"},{"from":"trust_structure","to":"voluntary_coordination","label":"implements"},{"from":"market_stability","to":"long_term_thinking","label":"enables"},{"from":"scientific_preparation","to":"research_and_method","label":"exemplifies"},{"from":"research_and_method","to":"self_help_as_true_aid","label":"informs"},{"from":"self_help_as_true_aid","to":"organized_giving","label":"guides the goal of"},{"from":"elements_of_civilization","to":"organized_giving","label":"provides taxonomy for"},{"from":"organized_giving","to":"systematic_planning","label":"requires"},{"from":"organized_giving","to":"combination_in_charity","label":"leads to"},{"from":"organized_giving","to":"philanthropic_efficiency","label":"measures success via"},{"from":"combination_in_charity","to":"sectarian_walls","label":"dissolves"},{"from":"combination_in_charity","to":"waste_reduction","label":"achieves"},{"from":"waste_reduction","to":"philanthropic_efficiency","label":"improves"},{"from":"systematic_planning","to":"scientific_preparation","label":"enables"},{"from":"systematic_planning","to":"building_for_permanence","label":"underpins"},{"from":"sectarian_walls","to":"waste_reduction","label":"are the primary obstacle to"},{"from":"personal_sacrifice","to":"character_over_argument","label":"is the clearest proof of"},{"from":"long_term_thinking","to":"organized_giving","label":"motivates"},{"from":"cooperative_principle","to":"unanimous_consensus","label":"is expressed in practice by"}]};
+  const frame = document.querySelector('.kg-frame');
+  if (!data.nodes?.length) {
+    frame.innerHTML = '<div style="height:100%;display:flex;align-items:center;justify-content:center;color:#333;font-size:.95rem;padding:24px;text-align:center">No knowledge graph was generated for this summary.</div>';
+    return;
+  }
+
+  // Double rAF ensures the browser has committed final layout before we read dimensions
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+
+  const W = frame.clientWidth;
+  const H = frame.clientHeight;
+  const svg = d3.select('#kg-svg')
+    .attr('width', W).attr('height', H)
+    .attr('viewBox',`0 0 ${W} ${H}`)
+    .attr('preserveAspectRatio','xMidYMid meet');
+
+  const maxCh = d3.max(data.nodes, n => (n.chapters || []).length) || 1;
+  const color = d3.scaleSequential().domain([0, maxCh]).interpolator(d3.interpolate('#2a4a4a','#ff6b4a'));
+
+  const nodes = data.nodes.map(d => ({ ...d }));
+  // Filter edges: drop self-loops and references to non-existent node IDs (would produce NaN positions)
+  const nodeIds = new Set(nodes.map(n => n.id));
+  const links = (data.edges || [])
+    .filter(e => e.from !== e.to && nodeIds.has(e.from) && nodeIds.has(e.to))
+    .map(e => ({ source: e.from, target: e.to, label: e.label || '' }));
+
+  const defs = svg.append('defs');
+  defs.append('marker').attr('id','arr').attr('markerWidth',8).attr('markerHeight',8)
+    .attr('refX',34).attr('refY',3).attr('orient','auto')
+    .append('path').attr('d','M0,0 L0,6 L8,3 z').attr('fill','#2a4a4a');
+
+  const zoomLayer = svg.append('g');
+  const linkG = zoomLayer.append('g').selectAll('g').data(links).join('g');
+  const nodeG = zoomLayer.append('g').selectAll('g').data(nodes).join('g').attr('class','node');
+
+  const nodeCount = nodes.length;
+  const linkDist = nodeCount > 20 ? 110 : 140;
+  const chargeStr = nodeCount > 20 ? -300 : -420;
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id).distance(linkDist))
+    .force('charge', d3.forceManyBody().strength(chargeStr))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .force('collide', d3.forceCollide(52));
+
+  linkG.append('line').attr('stroke','#2a4a4a').attr('stroke-width',1.5).attr('marker-end','url(#arr)');
+  const edgeLbl = linkG.append('text').attr('class','edge-label').attr('text-anchor','middle')
+    .text(d => d.label).style('opacity',0);
+  linkG.on('mouseenter', function(){ d3.select(this).select('text').style('opacity',1); })
+       .on('mouseleave', function(){ d3.select(this).select('text').style('opacity',0); });
+
+  const tooltip = document.getElementById('tooltip');
+  const zoom = d3.zoom()
+    .scaleExtent([0.08, 4])
+    .on('zoom', e => { zoomLayer.attr('transform', e.transform); });
+
+  svg.call(zoom).on('dblclick.zoom', null);
+
+  nodeG.call(d3.drag()
+      .on('start', (e, d) => { if (!e.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
+    .on('click', (e, d) => {
+      document.querySelectorAll('.ch-section').forEach(el => el.classList.remove('highlight'));
+      let first = null;
+      document.querySelectorAll('.ch-section[data-concepts]').forEach(el => {
+        if (el.dataset.concepts.split(',').includes(d.id)) { el.classList.add('highlight'); if (!first) first = el; }
+      });
+      if (first) first.scrollIntoView({ behavior:'smooth', block:'center' });
+    })
+    .on('mouseover', (e, d) => { tooltip.style.display='block'; tooltip.innerHTML=`<strong>${d.label}</strong><br>${d.description||''}`; })
+    .on('mousemove', e => { tooltip.style.left=(e.clientX+14)+'px'; tooltip.style.top=(e.clientY-10)+'px'; })
+    .on('mouseleave', () => { tooltip.style.display='none'; });
+
+  nodeG.append('circle').attr('r',30)
+    .attr('fill', d => color((d.chapters || []).length))
+    .attr('stroke','#182828').attr('stroke-width',2);
+  // Two-line word-wrapped labels — split at a space near the midpoint
+  nodeG.append('text').attr('text-anchor','middle').each(function(d) {
+    const sel = d3.select(this);
+    const words = d.label.split(/\s+/);
+    if (words.length <= 1 || d.label.length <= 11) {
+      const lbl = d.label.length > 16 ? d.label.slice(0, 15) + '…' : d.label;
+      sel.append('tspan').attr('x', 0).attr('dy', '4px').attr('font-size', '10px').attr('font-weight', '700').attr('fill', '#eee').text(lbl);
+    } else {
+      const mid = Math.ceil(words.length / 2);
+      const l1 = words.slice(0, mid).join(' ');
+      const l2 = words.slice(mid).join(' ');
+      sel.append('tspan').attr('x', 0).attr('dy', '-5px').attr('font-size', '10px').attr('font-weight', '700').attr('fill', '#eee').text(l1.length > 14 ? l1.slice(0, 13) + '…' : l1);
+      sel.append('tspan').attr('x', 0).attr('dy', '13px').attr('font-size', '10px').attr('font-weight', '700').attr('fill', '#eee').text(l2.length > 14 ? l2.slice(0, 13) + '…' : l2);
+    }
+  });
+
+  function graphBounds() {
+    const points = [];
+    nodes.forEach(node => {
+      if (!Number.isFinite(node.x) || !Number.isFinite(node.y)) return;
+      points.push([node.x - 54, node.y - 54], [node.x + 54, node.y + 54]);
+    });
+    links.forEach(link => {
+      const sx = link.source?.x, sy = link.source?.y, tx = link.target?.x, ty = link.target?.y;
+      if ([sx, sy, tx, ty].every(Number.isFinite)) {
+        points.push([sx, sy], [tx, ty]);
+      }
+    });
+    if (!points.length) return null;
+    const xs = points.map(p => p[0]);
+    const ys = points.map(p => p[1]);
+    return {
+      x: Math.min(...xs),
+      y: Math.min(...ys),
+      width: Math.max(...xs) - Math.min(...xs),
+      height: Math.max(...ys) - Math.min(...ys),
+    };
+  }
+
+  function fitGraph(animated) {
+    const fw = frame.clientWidth;
+    const fh = frame.clientHeight;
+    if (!fw || !fh) return;
+    const bounds = graphBounds();
+    if (!bounds || bounds.width <= 0 || bounds.height <= 0) return;
+
+    const pad = 56;
+    const scale = Math.max(0.08, Math.min(1.6, Math.min((fw - pad * 2) / bounds.width, (fh - pad * 2) / bounds.height)));
+    const tx = (fw / 2) - scale * (bounds.x + bounds.width / 2);
+    const ty = (fh / 2) - scale * (bounds.y + bounds.height / 2);
+    const transform = d3.zoomIdentity.translate(tx, ty).scale(scale);
+
+    const selection = animated ? svg.transition().duration(280) : svg;
+    selection.call(zoom.transform, transform);
+  }
+
+  document.getElementById('kg-zoom-in').addEventListener('click', () => {
+    svg.transition().duration(180).call(zoom.scaleBy, 1.2);
+  });
+  document.getElementById('kg-zoom-out').addEventListener('click', () => {
+    svg.transition().duration(180).call(zoom.scaleBy, 1 / 1.2);
+  });
+  document.getElementById('kg-reset').addEventListener('click', () => fitGraph(true));
+
+  // Pre-run simulation synchronously so all node positions are final before
+  // touching the DOM. This eliminates the async race between tick/end/setTimeout
+  // that caused nodes to render clustered in a corner before fitGraph could act.
+  sim.stop();
+  for (let i = 0; i < 300; ++i) sim.tick();
+
+  // Guard: replace any NaN positions (e.g. orphaned nodes) with a spread near center
+  const cx = frame.clientWidth / 2, cy = frame.clientHeight / 2;
+  nodes.forEach(n => {
+    if (!Number.isFinite(n.x)) n.x = cx + (Math.random() - 0.5) * 180;
+    if (!Number.isFinite(n.y)) n.y = cy + (Math.random() - 0.5) * 180;
+  });
+
+  function updatePositions() {
+    linkG.select('line')
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    edgeLbl.attr('x', d => (d.source.x + d.target.x) / 2).attr('y', d => (d.source.y + d.target.y) / 2 - 6);
+    nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
+  }
+  updatePositions();
+  fitGraph(false);
+
+  // Tick handler only fires during user-initiated drags
+  sim.on('tick', updatePositions);
+
+  new ResizeObserver(() => {
+    const nw = frame.clientWidth, nh = frame.clientHeight;
+    if (!nw || !nh) return;
+    svg.attr('width', nw).attr('height', nh).attr('viewBox', `0 0 ${nw} ${nh}`);
+    fitGraph(false);
+  }).observe(frame);
+
+  })); // end double rAF
+});
+</script>
+</body>
+</html>
