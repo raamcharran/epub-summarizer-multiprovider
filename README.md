@@ -143,8 +143,8 @@ lib/
 
 Two public domain books from [Project Gutenberg](https://www.gutenberg.org/) were used during development and are great for a first test run:
 
-- **The Wealth of Nations** — Adam Smith · [Gutenberg](https://www.gutenberg.org/ebooks/3300) · [View summary](https://htmlpreview.github.io/?https://github.com/raamcharran/epub-summarizer-multiprovider/blob/master/examples/wealth-of-nations/summary.html)
-- **Random Reminiscences of Men and Events** — John D. Rockefeller · [Gutenberg](https://www.gutenberg.org/ebooks/17090) · [View summary](https://htmlpreview.github.io/?https://github.com/raamcharran/epub-summarizer-multiprovider/blob/master/examples/rockefeller-reminiscences/summary.html)
+- **The Wealth of Nations** — Adam Smith · [View summary](https://htmlpreview.github.io/?https://github.com/raamcharran/epub-summarizer-multiprovider/blob/master/examples/wealth-of-nations/summary.html)
+- **Random Reminiscences of Men and Events** — John D. Rockefeller · [View summary](https://htmlpreview.github.io/?https://github.com/raamcharran/epub-summarizer-multiprovider/blob/master/examples/rockefeller-reminiscences/summary.html)
 
 Both are DRM-free and available as EPUB directly from Project Gutenberg.
 
