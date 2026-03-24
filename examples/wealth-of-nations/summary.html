@@ -59,9 +59,14 @@ blockquote{border-left:2px solid #ff6b4a;margin:20px 0;padding:8px 0 8px 24px;ba
 .chapter-list{padding:80px 0;border-bottom:1px solid #253535}
 .chapter-list ul{list-style:none;margin:32px 0 0;padding:0;columns:2;column-gap:40px}
 @media(max-width:600px){.chapter-list ul{columns:1}}
-.ch-list-link{display:flex;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid #1e2e2e;color:#aaa;font-size:.9rem;font-weight:500;transition:color .15s}
+.ch-list-link{display:flex;align-items:flex-start;gap:16px;padding:12px 0;border-bottom:1px solid #1e2e2e;color:#aaa;text-decoration:none;transition:color .15s}
 .ch-list-link:hover{color:#ff6b4a;text-decoration:none}
-.ch-list-num{flex-shrink:0;font-size:.65rem;font-weight:700;color:#ff6b4a;letter-spacing:.12em;min-width:22px}
+.ch-list-link:hover .ch-list-sub{color:#ff8c75}
+.ch-list-num{flex-shrink:0;font-size:.65rem;font-weight:700;color:#ff6b4a;letter-spacing:.12em;min-width:22px;padding-top:3px}
+.ch-list-body{display:flex;flex-direction:column;gap:3px}
+.ch-list-title{font-size:.9rem;font-weight:600;color:#ddd;line-height:1.3}
+.ch-list-link:hover .ch-list-title{color:#ff6b4a}
+.ch-list-sub{font-size:.78rem;font-weight:400;color:#666;line-height:1.45}
 .export-wrap{padding:80px 0 0;text-align:left}
 .export-btn{background:transparent;color:#ff6b4a;border:1px solid #ff6b4a;padding:12px 28px;font-size:.72rem;cursor:pointer;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:all .2s;font-family:'Inter',sans-serif}
 .export-btn:hover{background:#ff6b4a;color:#182828}
@@ -137,55 +142,55 @@ blockquote{border-left:2px solid #ff6b4a;margin:20px 0;padding:8px 0 8px 24px;ba
   <span class="part-label">Contents</span>
   <h2 class="section-title">Chapters</h2>
   <ul>
-    <li><a href="#ch_1" class="ch-list-link"><span class="ch-list-num">01</span>Chapter 1</a></li>
-<li><a href="#ch_2" class="ch-list-link"><span class="ch-list-num">02</span>Chapter 2</a></li>
-<li><a href="#ch_4" class="ch-list-link"><span class="ch-list-num">03</span>Chapter 3</a></li>
-<li><a href="#ch_5" class="ch-list-link"><span class="ch-list-num">04</span>Chapter 4</a></li>
-<li><a href="#ch_6" class="ch-list-link"><span class="ch-list-num">05</span>Chapter 5</a></li>
-<li><a href="#ch_7" class="ch-list-link"><span class="ch-list-num">06</span>Chapter 6</a></li>
-<li><a href="#ch_8" class="ch-list-link"><span class="ch-list-num">07</span>Chapter 7</a></li>
-<li><a href="#ch_9" class="ch-list-link"><span class="ch-list-num">08</span>Chapter 8</a></li>
-<li><a href="#ch_10" class="ch-list-link"><span class="ch-list-num">09</span>Chapter 9</a></li>
-<li><a href="#ch_11" class="ch-list-link"><span class="ch-list-num">10</span>Chapter 10</a></li>
-<li><a href="#ch_12" class="ch-list-link"><span class="ch-list-num">11</span>Chapter 11</a></li>
-<li><a href="#ch_13" class="ch-list-link"><span class="ch-list-num">12</span>Chapter 12</a></li>
-<li><a href="#ch_14" class="ch-list-link"><span class="ch-list-num">13</span>Chapter 13</a></li>
-<li><a href="#ch_15" class="ch-list-link"><span class="ch-list-num">14</span>Chapter 14</a></li>
-<li><a href="#ch_16" class="ch-list-link"><span class="ch-list-num">15</span>Chapter 15</a></li>
-<li><a href="#ch_17" class="ch-list-link"><span class="ch-list-num">16</span>Chapter 16</a></li>
-<li><a href="#ch_18" class="ch-list-link"><span class="ch-list-num">17</span>Chapter 17</a></li>
-<li><a href="#ch_19" class="ch-list-link"><span class="ch-list-num">18</span>Chapter 18</a></li>
-<li><a href="#ch_20" class="ch-list-link"><span class="ch-list-num">19</span>Chapter 19</a></li>
-<li><a href="#ch_21" class="ch-list-link"><span class="ch-list-num">20</span>Chapter 20</a></li>
-<li><a href="#ch_22" class="ch-list-link"><span class="ch-list-num">21</span>Chapter 21</a></li>
-<li><a href="#ch_23" class="ch-list-link"><span class="ch-list-num">22</span>Chapter 22</a></li>
-<li><a href="#ch_24" class="ch-list-link"><span class="ch-list-num">23</span>Chapter 23</a></li>
-<li><a href="#ch_25" class="ch-list-link"><span class="ch-list-num">24</span>Chapter 24</a></li>
-<li><a href="#ch_26" class="ch-list-link"><span class="ch-list-num">25</span>Chapter 25</a></li>
-<li><a href="#ch_27" class="ch-list-link"><span class="ch-list-num">26</span>Chapter 26</a></li>
-<li><a href="#ch_28" class="ch-list-link"><span class="ch-list-num">27</span>Chapter 27</a></li>
-<li><a href="#ch_29" class="ch-list-link"><span class="ch-list-num">28</span>Chapter 28</a></li>
-<li><a href="#ch_31" class="ch-list-link"><span class="ch-list-num">29</span>Chapter 29</a></li>
-<li><a href="#ch_32" class="ch-list-link"><span class="ch-list-num">30</span>Chapter 30</a></li>
-<li><a href="#ch_33" class="ch-list-link"><span class="ch-list-num">31</span>Chapter 31</a></li>
-<li><a href="#ch_34" class="ch-list-link"><span class="ch-list-num">32</span>Chapter 32</a></li>
-<li><a href="#ch_35" class="ch-list-link"><span class="ch-list-num">33</span>Chapter 33</a></li>
-<li><a href="#ch_36" class="ch-list-link"><span class="ch-list-num">34</span>Chapter 34</a></li>
-<li><a href="#ch_37" class="ch-list-link"><span class="ch-list-num">35</span>Chapter 35</a></li>
-<li><a href="#ch_38" class="ch-list-link"><span class="ch-list-num">36</span>Chapter 36</a></li>
-<li><a href="#ch_39" class="ch-list-link"><span class="ch-list-num">37</span>Chapter 37</a></li>
-<li><a href="#ch_40" class="ch-list-link"><span class="ch-list-num">38</span>Chapter 38</a></li>
-<li><a href="#ch_41" class="ch-list-link"><span class="ch-list-num">39</span>Chapter 39</a></li>
-<li><a href="#ch_43" class="ch-list-link"><span class="ch-list-num">40</span>Chapter 40</a></li>
-<li><a href="#ch_44" class="ch-list-link"><span class="ch-list-num">41</span>Chapter 41</a></li>
-<li><a href="#ch_45" class="ch-list-link"><span class="ch-list-num">42</span>Chapter 42</a></li>
-<li><a href="#ch_46" class="ch-list-link"><span class="ch-list-num">43</span>Chapter 43</a></li>
-<li><a href="#ch_47" class="ch-list-link"><span class="ch-list-num">44</span>Chapter 44</a></li>
-<li><a href="#ch_48" class="ch-list-link"><span class="ch-list-num">45</span>Chapter 45</a></li>
-<li><a href="#ch_49" class="ch-list-link"><span class="ch-list-num">46</span>Chapter 46</a></li>
-<li><a href="#ch_50" class="ch-list-link"><span class="ch-list-num">47</span>Chapter 47</a></li>
-<li><a href="#ch_51" class="ch-list-link"><span class="ch-list-num">48</span>Chapter 48</a></li>
-<li><a href="#ch_52" class="ch-list-link"><span class="ch-list-num">49</span>Chapter 49</a></li>
+    <li><a href="#ch_1" class="ch-list-link"><span class="ch-list-num">01</span><span class="ch-list-body"><span class="ch-list-title">Chapter 1</span><span class="ch-list-sub">Chapter 1 of Adam Smith&#39;s &#39;The Wealth of Nations&#39; introduces the concept of the division of labour as the f…</span></span></a></li>
+<li><a href="#ch_2" class="ch-list-link"><span class="ch-list-num">02</span><span class="ch-list-body"><span class="ch-list-title">Chapter 2</span><span class="ch-list-sub">Adam Smith opens The Wealth of Nations by identifying the central puzzle his entire work will answer: why a…</span></span></a></li>
+<li><a href="#ch_4" class="ch-list-link"><span class="ch-list-num">03</span><span class="ch-list-body"><span class="ch-list-title">Chapter 3</span><span class="ch-list-sub">Adam Smith opens his inquiry into national wealth by identifying the division of labour as the single great…</span></span></a></li>
+<li><a href="#ch_5" class="ch-list-link"><span class="ch-list-num">04</span><span class="ch-list-body"><span class="ch-list-title">Chapter 4</span><span class="ch-list-sub">This chapter asks a deceptively simple question: why does the division of labour exist at all?</span></span></a></li>
+<li><a href="#ch_6" class="ch-list-link"><span class="ch-list-num">05</span><span class="ch-list-body"><span class="ch-list-title">Chapter 5</span><span class="ch-list-sub">This chapter establishes a fundamental constraint on economic specialization: a worker can only dedicate th…</span></span></a></li>
+<li><a href="#ch_7" class="ch-list-link"><span class="ch-list-num">06</span><span class="ch-list-body"><span class="ch-list-title">Chapter 6</span><span class="ch-list-sub">Chapter IV of Book I of The Wealth of Nations explains how money emerges naturally from the division of lab…</span></span></a></li>
+<li><a href="#ch_8" class="ch-list-link"><span class="ch-list-num">07</span><span class="ch-list-body"><span class="ch-list-title">Chapter 7</span><span class="ch-list-sub">This chapter asks a deceptively simple question: what is the &#39;real&#39; price of anything?</span></span></a></li>
+<li><a href="#ch_9" class="ch-list-link"><span class="ch-list-num">08</span><span class="ch-list-body"><span class="ch-list-title">Chapter 8</span><span class="ch-list-sub">This chapter investigates what determines the price of any commodity — why one thing costs more than another.</span></span></a></li>
+<li><a href="#ch_10" class="ch-list-link"><span class="ch-list-num">09</span><span class="ch-list-body"><span class="ch-list-title">Chapter 9</span><span class="ch-list-sub">This chapter introduces one of the most foundational ideas in economics: the distinction between the &#39;natur…</span></span></a></li>
+<li><a href="#ch_11" class="ch-list-link"><span class="ch-list-num">10</span><span class="ch-list-body"><span class="ch-list-title">Chapter 10</span><span class="ch-list-sub">Chapter 10 of Book I asks a natural follow-up to the earlier discussion of wages and profits: if workers an…</span></span></a></li>
+<li><a href="#ch_12" class="ch-list-link"><span class="ch-list-num">11</span><span class="ch-list-body"><span class="ch-list-title">Chapter 11</span><span class="ch-list-sub">This chapter examines the profits earned by those who invest capital (stock) in trade and industry.</span></span></a></li>
+<li><a href="#ch_13" class="ch-list-link"><span class="ch-list-num">12</span><span class="ch-list-body"><span class="ch-list-title">Chapter 12</span><span class="ch-list-sub">This chapter opens with a foundational claim: in a free market, the total advantages and disadvantages of d…</span></span></a></li>
+<li><a href="#ch_14" class="ch-list-link"><span class="ch-list-num">13</span><span class="ch-list-body"><span class="ch-list-title">Chapter 13</span><span class="ch-list-sub">This chapter examines how the policy of publicly funding education for certain professions distorts the lab…</span></span></a></li>
+<li><a href="#ch_15" class="ch-list-link"><span class="ch-list-num">14</span><span class="ch-list-body"><span class="ch-list-title">Chapter 14</span><span class="ch-list-sub">Adam Smith opens this chapter by defining rent as the price paid for the use of land — and crucially, he ar…</span></span></a></li>
+<li><a href="#ch_16" class="ch-list-link"><span class="ch-list-num">15</span><span class="ch-list-body"><span class="ch-list-title">Chapter 15</span><span class="ch-list-sub">This chapter examines how agricultural improvement reshapes the relative prices of different categories of …</span></span></a></li>
+<li><a href="#ch_17" class="ch-list-link"><span class="ch-list-num">16</span><span class="ch-list-body"><span class="ch-list-title">Chapter 16</span><span class="ch-list-sub">This chapter from Adam Smith&#39;s *The Wealth of Nations* examines the flow of precious metals — gold and silv…</span></span></a></li>
+<li><a href="#ch_18" class="ch-list-link"><span class="ch-list-num">17</span><span class="ch-list-body"><span class="ch-list-title">Chapter 17</span><span class="ch-list-sub">Chapter 17 concludes two interwoven analytical threads from Adam Smith&#39;s broader inquiry into the nature of…</span></span></a></li>
+<li><a href="#ch_19" class="ch-list-link"><span class="ch-list-num">18</span><span class="ch-list-body"><span class="ch-list-title">Chapter 18</span><span class="ch-list-sub">This chapter serves as the introduction to Book II of Adam Smith&#39;s &#39;The Wealth of Nations,&#39; setting up the …</span></span></a></li>
+<li><a href="#ch_20" class="ch-list-link"><span class="ch-list-num">19</span><span class="ch-list-body"><span class="ch-list-title">Chapter 19</span><span class="ch-list-sub">This chapter introduces Adam Smith&#39;s foundational framework for understanding how wealth is organized and d…</span></span></a></li>
+<li><a href="#ch_21" class="ch-list-link"><span class="ch-list-num">20</span><span class="ch-list-body"><span class="ch-list-title">Chapter 20</span><span class="ch-list-sub">Adam Smith begins by recapping a foundational result from Book I: the price of every commodity ultimately r…</span></span></a></li>
+<li><a href="#ch_22" class="ch-list-link"><span class="ch-list-num">21</span><span class="ch-list-body"><span class="ch-list-title">Chapter 21</span><span class="ch-list-sub">This chapter examines a real historical case of a bank that, intending to relieve economic distress in its …</span></span></a></li>
+<li><a href="#ch_23" class="ch-list-link"><span class="ch-list-num">22</span><span class="ch-list-body"><span class="ch-list-title">Chapter 22</span><span class="ch-list-sub">Adam Smith opens this chapter by drawing a foundational distinction between two kinds of labour: productive…</span></span></a></li>
+<li><a href="#ch_24" class="ch-list-link"><span class="ch-list-num">23</span><span class="ch-list-body"><span class="ch-list-title">Chapter 23</span><span class="ch-list-sub">This chapter, &#39;Of Stock Lent at Interest,&#39; opens by distinguishing two uses a borrower can make of borrowed…</span></span></a></li>
+<li><a href="#ch_25" class="ch-list-link"><span class="ch-list-num">24</span><span class="ch-list-body"><span class="ch-list-title">Chapter 24</span><span class="ch-list-sub">This chapter asks a deceptively simple question: if all capital ultimately employs productive labor, does i…</span></span></a></li>
+<li><a href="#ch_26" class="ch-list-link"><span class="ch-list-num">25</span><span class="ch-list-body"><span class="ch-list-title">Chapter 25</span><span class="ch-list-sub">This chapter opens Book III by describing the foundational economic relationship between town and country.</span></span></a></li>
+<li><a href="#ch_27" class="ch-list-link"><span class="ch-list-num">26</span><span class="ch-list-body"><span class="ch-list-title">Chapter 26</span><span class="ch-list-sub">This chapter asks a foundational question: why did European agriculture stagnate for centuries after the fa…</span></span></a></li>
+<li><a href="#ch_28" class="ch-list-link"><span class="ch-list-num">27</span><span class="ch-list-body"><span class="ch-list-title">Chapter 27</span><span class="ch-list-sub">This chapter traces how towns and cities in medieval Europe emerged from a condition of near-servitude to b…</span></span></a></li>
+<li><a href="#ch_29" class="ch-list-link"><span class="ch-list-num">28</span><span class="ch-list-body"><span class="ch-list-title">Chapter 28</span><span class="ch-list-sub">This chapter, Book III Chapter IV of Adam Smith&#39;s &#39;The Wealth of Nations,&#39; argues that the growth of commer…</span></span></a></li>
+<li><a href="#ch_31" class="ch-list-link"><span class="ch-list-num">29</span><span class="ch-list-body"><span class="ch-list-title">Chapter 29</span><span class="ch-list-sub">Chapter 29 opens Book IV of The Wealth of Nations by attacking the foundational assumption of mercantilism:…</span></span></a></li>
+<li><a href="#ch_32" class="ch-list-link"><span class="ch-list-num">30</span><span class="ch-list-body"><span class="ch-list-title">Chapter 30</span><span class="ch-list-sub">This chapter examines whether government restrictions on imports—through high duties or outright prohibitio…</span></span></a></li>
+<li><a href="#ch_33" class="ch-list-link"><span class="ch-list-num">31</span><span class="ch-list-body"><span class="ch-list-title">Chapter 31</span><span class="ch-list-sub">Chapter 31 of The Wealth of Nations examines a second major tool of the mercantile system: extraordinary im…</span></span></a></li>
+<li><a href="#ch_34" class="ch-list-link"><span class="ch-list-num">32</span><span class="ch-list-body"><span class="ch-list-title">Chapter 32</span><span class="ch-list-sub">This chapter examines &#39;drawbacks&#39; — a policy mechanism by which merchants who pay import duties on foreign …</span></span></a></li>
+<li><a href="#ch_35" class="ch-list-link"><span class="ch-list-num">33</span><span class="ch-list-body"><span class="ch-list-title">Chapter 33</span><span class="ch-list-sub">This chapter examines export bounties — government subsidies paid to merchants so they can sell goods cheap…</span></span></a></li>
+<li><a href="#ch_36" class="ch-list-link"><span class="ch-list-num">34</span><span class="ch-list-body"><span class="ch-list-title">Chapter 34</span><span class="ch-list-sub">This chapter examines bilateral trade treaties, arguing that when one nation grants another preferential ma…</span></span></a></li>
+<li><a href="#ch_37" class="ch-list-link"><span class="ch-list-num">35</span><span class="ch-list-body"><span class="ch-list-title">Chapter 35</span><span class="ch-list-sub">Chapter 35 of Adam Smith&#39;s Wealth of Nations opens Book IV&#39;s discussion of colonies by asking a foundationa…</span></span></a></li>
+<li><a href="#ch_38" class="ch-list-link"><span class="ch-list-num">36</span><span class="ch-list-body"><span class="ch-list-title">Chapter 36</span><span class="ch-list-sub">Chapter 36 of Adam Smith&#39;s *The Wealth of Nations* delivers a sweeping indictment of European colonial poli…</span></span></a></li>
+<li><a href="#ch_39" class="ch-list-link"><span class="ch-list-num">37</span><span class="ch-list-body"><span class="ch-list-title">Chapter 37</span><span class="ch-list-sub">Chapter 37 of Adam Smith&#39;s &#39;Wealth of Nations&#39; examines whether exclusive joint-stock companies—government-…</span></span></a></li>
+<li><a href="#ch_40" class="ch-list-link"><span class="ch-list-num">38</span><span class="ch-list-body"><span class="ch-list-title">Chapter 38</span><span class="ch-list-sub">Adam Smith opens this concluding chapter on mercantilism by noting an apparent paradox: while the mercantil…</span></span></a></li>
+<li><a href="#ch_41" class="ch-list-link"><span class="ch-list-num">39</span><span class="ch-list-body"><span class="ch-list-title">Chapter 39</span><span class="ch-list-sub">Chapter 39 of The Wealth of Nations is Adam Smith&#39;s critique of the Physiocratic school of political econom…</span></span></a></li>
+<li><a href="#ch_43" class="ch-list-link"><span class="ch-list-num">40</span><span class="ch-list-body"><span class="ch-list-title">Chapter 40</span><span class="ch-list-sub">This chapter opens Book V of The Wealth of Nations by identifying the first duty of any sovereign: defendin…</span></span></a></li>
+<li><a href="#ch_44" class="ch-list-link"><span class="ch-list-num">41</span><span class="ch-list-body"><span class="ch-list-title">Chapter 41</span><span class="ch-list-sub">Chapter 41 opens Book V&#39;s discussion of the sovereign&#39;s third and final duty: erecting and maintaining publ…</span></span></a></li>
+<li><a href="#ch_45" class="ch-list-link"><span class="ch-list-num">42</span><span class="ch-list-body"><span class="ch-list-title">Chapter 42</span><span class="ch-list-sub">This chapter from Adam Smith&#39;s *Wealth of Nations* examines the organizational form of joint-stock companie…</span></span></a></li>
+<li><a href="#ch_46" class="ch-list-link"><span class="ch-list-num">43</span><span class="ch-list-body"><span class="ch-list-title">Chapter 43</span><span class="ch-list-sub">This chapter applies Adam Smith&#39;s core economic logic — that incentive structures shape behavior — to the i…</span></span></a></li>
+<li><a href="#ch_47" class="ch-list-link"><span class="ch-list-num">44</span><span class="ch-list-body"><span class="ch-list-title">Chapter 44</span><span class="ch-list-sub">This chapter, Book V Chapter II of Adam Smith&#39;s Wealth of Nations, asks a foundational question of politica…</span></span></a></li>
+<li><a href="#ch_48" class="ch-list-link"><span class="ch-list-num">45</span><span class="ch-list-body"><span class="ch-list-title">Chapter 45</span><span class="ch-list-sub">Adam Smith opens this chapter by drawing an analogy between taxing the interest on money and taxing the ren…</span></span></a></li>
+<li><a href="#ch_49" class="ch-list-link"><span class="ch-list-num">46</span><span class="ch-list-body"><span class="ch-list-title">Chapter 46</span><span class="ch-list-sub">Chapter 46 of Adam Smith&#39;s &#39;The Wealth of Nations&#39; traces the historical evolution of English customs dutie…</span></span></a></li>
+<li><a href="#ch_50" class="ch-list-link"><span class="ch-list-num">47</span><span class="ch-list-body"><span class="ch-list-title">Chapter 47</span><span class="ch-list-sub">This chapter opens Adam Smith&#39;s treatise on public debt by tracing a historical arc from pre-commercial to …</span></span></a></li>
+<li><a href="#ch_51" class="ch-list-link"><span class="ch-list-num">48</span><span class="ch-list-body"><span class="ch-list-title">Chapter 48</span><span class="ch-list-sub">This chapter presents a fiscal thought experiment: what if Britain&#39;s existing system of taxation were exten…</span></span></a></li>
+<li><a href="#ch_52" class="ch-list-link"><span class="ch-list-num">49</span><span class="ch-list-body"><span class="ch-list-title">Chapter 49</span><span class="ch-list-sub">Chapter 49 is not a substantive chapter of Adam Smith&#39;s text but rather the closing legal and administrativ…</span></span></a></li>
   </ul>
 </div>
 

@@ -59,9 +59,14 @@ blockquote{border-left:2px solid #ff6b4a;margin:20px 0;padding:8px 0 8px 24px;ba
 .chapter-list{padding:80px 0;border-bottom:1px solid #253535}
 .chapter-list ul{list-style:none;margin:32px 0 0;padding:0;columns:2;column-gap:40px}
 @media(max-width:600px){.chapter-list ul{columns:1}}
-.ch-list-link{display:flex;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid #1e2e2e;color:#aaa;font-size:.9rem;font-weight:500;transition:color .15s}
+.ch-list-link{display:flex;align-items:flex-start;gap:16px;padding:12px 0;border-bottom:1px solid #1e2e2e;color:#aaa;text-decoration:none;transition:color .15s}
 .ch-list-link:hover{color:#ff6b4a;text-decoration:none}
-.ch-list-num{flex-shrink:0;font-size:.65rem;font-weight:700;color:#ff6b4a;letter-spacing:.12em;min-width:22px}
+.ch-list-link:hover .ch-list-sub{color:#ff8c75}
+.ch-list-num{flex-shrink:0;font-size:.65rem;font-weight:700;color:#ff6b4a;letter-spacing:.12em;min-width:22px;padding-top:3px}
+.ch-list-body{display:flex;flex-direction:column;gap:3px}
+.ch-list-title{font-size:.9rem;font-weight:600;color:#ddd;line-height:1.3}
+.ch-list-link:hover .ch-list-title{color:#ff6b4a}
+.ch-list-sub{font-size:.78rem;font-weight:400;color:#666;line-height:1.45}
 .export-wrap{padding:80px 0 0;text-align:left}
 .export-btn{background:transparent;color:#ff6b4a;border:1px solid #ff6b4a;padding:12px 28px;font-size:.72rem;cursor:pointer;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:all .2s;font-family:'Inter',sans-serif}
 .export-btn:hover{background:#ff6b4a;color:#182828}
@@ -91,9 +96,9 @@ blockquote{border-left:2px solid #ff6b4a;margin:20px 0;padding:8px 0 8px 24px;ba
   <span class="part-label">Contents</span>
   <h2 class="section-title">Chapters</h2>
   <ul>
-    <li><a href="#ch_1" class="ch-list-link"><span class="ch-list-num">01</span>Chapter 1</a></li>
-<li><a href="#ch_2" class="ch-list-link"><span class="ch-list-num">02</span>Chapter 2</a></li>
-<li><a href="#ch_3" class="ch-list-link"><span class="ch-list-num">03</span>Chapter 3</a></li>
+    <li><a href="#ch_1" class="ch-list-link"><span class="ch-list-num">01</span><span class="ch-list-body"><span class="ch-list-title">Chapter 1</span><span class="ch-list-sub">Chapter 1 of John D.</span></span></a></li>
+<li><a href="#ch_2" class="ch-list-link"><span class="ch-list-num">02</span><span class="ch-list-body"><span class="ch-list-title">Chapter 2</span><span class="ch-list-sub">Chapter 2 opens with a vivid account of an experimental blood transfusion performed by Dr.</span></span></a></li>
+<li><a href="#ch_3" class="ch-list-link"><span class="ch-list-num">03</span><span class="ch-list-body"><span class="ch-list-title">Chapter 3</span><span class="ch-list-sub">The content retrieved for Chapter 3 consists entirely of Project Gutenberg boilerplate — the standard licen…</span></span></a></li>
   </ul>
 </div>
 
