@@ -18,6 +18,7 @@ import { analyzeAllChapters, synthesize } from './lib/analyze.js';
 import { renderHtml, buildMarkdown, prepareChapterSvgs } from './lib/render.js';
 import { save, load, exists, saveOutput, listBooks, findBook, resolveBookSlug, bookDir, LIBRARY_DIR } from './lib/library.js';
 import { getAiConfig, describeAiConfig } from './lib/ai.js';
+import { logger } from './lib/logger.js';
 
 const CONCURRENCY = parseInt(process.env.AI_CONCURRENCY || '3', 10);
 
@@ -169,6 +170,12 @@ async function cmdIngest(epubPath) {
   console.log(`  Slug:     ${slug}\n`);
   if (forceRebuild) console.log('Force rebuild: enabled\n');
 
+  // Initialise logger now that we have the slug
+  const outDir = path.join(bookDir(slug), 'output');
+  logger.init(outDir);
+  logger.info(`title="${meta.title}"  author="${meta.author}"  chapters=${chapters.length}  slug=${slug}`);
+  logger.info(`provider=${aiConfig.provider}  model=${aiConfig.model || 'default'}  force=${forceRebuild}`);
+
   const hasCachedAnalyses = !forceRebuild && exists(slug, 'analyses');
   const hasCachedSynthesis = !forceRebuild && exists(slug, 'synthesis');
   const hasCachedSvgs = !forceRebuild && exists(slug, 'svgs');
@@ -183,19 +190,24 @@ async function cmdIngest(epubPath) {
 
   // Build RAG index
   console.log('Building RAG index...');
+  const endRag = logger.stage('rag-index');
   const index = buildIndex(chapters);
   save(slug, 'rag-index', index);
+  endRag(`chunks=${index.meta.totalChunks}  vocab=${index.meta.vocabSize}`);
   console.log(`  ${index.meta.totalChunks} chunks, ${index.meta.vocabSize} vocab terms\n`);
 
   // Run chapter analyses (check cache first)
   let analyses;
   if (hasCachedAnalyses) {
     console.log('Chapter analyses already cached — skipping API calls.');
+    logger.info('chapter-analyses: loaded from cache');
     analyses = load(slug, 'analyses');
   } else {
     console.log('Analyzing chapters...');
+    const endAnalyses = logger.stage('chapter-analyses');
     analyses = await analyzeAllChapters(chapters, index, { config: aiConfig });
     save(slug, 'analyses', analyses);
+    endAnalyses(`chapters=${chapters.length}`);
     console.log('  Chapter analyses cached.');
   }
 
@@ -203,22 +215,28 @@ async function cmdIngest(epubPath) {
   let synthesis;
   if (hasCachedSynthesis) {
     console.log('Synthesis already cached — skipping API call.');
+    logger.info('synthesis: loaded from cache');
     synthesis = load(slug, 'synthesis');
   } else {
     console.log('\nSynthesizing...');
+    const endSynth = logger.stage('synthesis');
     synthesis = await synthesize(chapters, analyses, index, { config: aiConfig });
     save(slug, 'synthesis', synthesis);
+    endSynth(`nodes=${synthesis.nodes?.length || 0}  edges=${synthesis.edges?.length || 0}`);
     console.log('  Synthesis cached.');
   }
 
   let svgs;
   if (hasCachedSvgs) {
     console.log('Chapter infographics already cached — skipping live model calls.');
+    logger.info('svgs: loaded from cache');
     svgs = load(slug, 'svgs');
   } else {
     console.log('\nGenerating chapter infographics...');
+    const endSvgs = logger.stage('svg-generation');
     svgs = await prepareChapterSvgs(chapters, analyses, { config: aiConfig });
     save(slug, 'svgs', svgs);
+    endSvgs(`count=${svgs.length}`);
     console.log('  Chapter infographics cached.');
   }
 
@@ -230,15 +248,20 @@ async function cmdIngest(epubPath) {
 
   // Render HTML
   console.log('\nRendering HTML...');
+  const endRender = logger.stage('html-render');
   const html = await renderHtml(fullMeta, chapters, analyses, synthesis, { svgs, generateSvgs: false });
   const md   = buildMarkdown(fullMeta, chapters, analyses);
   const htmlPath = saveOutput(slug, 'summary.html', html);
   const mdPath   = saveOutput(slug, 'summary.md', md);
-
   const kb = (Buffer.byteLength(html, 'utf8') / 1024).toFixed(1);
+  endRender(`size=${kb}KB`);
+
+  const logPath = logger.finish(htmlPath);
+
   console.log(`\nDone! Book saved to library as "${slug}"`);
   console.log(`  HTML: ${htmlPath}  (${kb} KB)`);
-  console.log(`  MD:   ${mdPath}\n`);
+  console.log(`  MD:   ${mdPath}`);
+  console.log(`  Log:  ${logPath}\n`);
 }
 
 function cmdList() {
