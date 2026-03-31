@@ -20,7 +20,7 @@ import { save, load, exists, saveOutput, listBooks, findBook, resolveBookSlug, b
 import { getAiConfig, describeAiConfig } from './lib/ai.js';
 import { logger } from './lib/logger.js';
 
-const CONCURRENCY = parseInt(process.env.AI_CONCURRENCY || '3', 10);
+const CONCURRENCY = parseInt(process.env.AI_CONCURRENCY || '5', 10);
 
 // Analysis runs through a provider abstraction: Claude CLI, Anthropic, OpenAI, or OpenAI-compatible APIs
 
