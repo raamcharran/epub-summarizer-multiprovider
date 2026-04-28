@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment — never commit your API keys
+.env
+.env.local
+
+# User book library — contains personal reading data
+library/
+
+# EPUB files — often large and copyrighted
+*.epub
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
