@@ -106,11 +106,33 @@ function parseEpub(filePath) {
         const item = epub.flow[i];
         try {
           const raw = await new Promise((res, rej) =>
-            epub.getChapter(item.id, (err, t) => err ? rej(err) : res(t || '')));
-          const text = stripHtml(raw);
-          if (wordCount(text) < 200) { skipped++; continue; }
-          const title = item.title || `Chapter ${chapters.length + 1}`;
-          chapters.push({ id: `ch_${i}`, title: title.trim(), text, wordCount: wordCount(text) });
+            epub.getChapterRaw(item.id, (err, t) => err ? rej(err) : res(t || '')));
+
+          // Split spine item on <h1>/<h2> headings so single-file Gutenberg-style
+          // EPUBs (whose TOC entries are anchors inside one big document) yield
+          // the real per-section chapters instead of one mega-blob.
+          const headingRe = /<h([12])\b[^>]*>([\s\S]*?)<\/h\1>/gi;
+          const heads = [];
+          let hm;
+          while ((hm = headingRe.exec(raw)) !== null) {
+            heads.push({ start: hm.index, end: hm.index + hm[0].length, title: stripHtml(hm[2]) });
+          }
+
+          if (heads.length >= 2) {
+            for (let j = 0; j < heads.length; j++) {
+              const segStart = heads[j].end;
+              const segEnd = j + 1 < heads.length ? heads[j + 1].start : raw.length;
+              const text = stripHtml(raw.slice(segStart, segEnd));
+              if (wordCount(text) < 200) { skipped++; continue; }
+              const title = heads[j].title || `Chapter ${chapters.length + 1}`;
+              chapters.push({ id: `ch_${i}_${j}`, title: title.trim(), text, wordCount: wordCount(text) });
+            }
+          } else {
+            const text = stripHtml(raw);
+            if (wordCount(text) < 200) { skipped++; continue; }
+            const title = (heads[0]?.title) || item.title || `Chapter ${chapters.length + 1}`;
+            chapters.push({ id: `ch_${i}`, title: title.trim(), text, wordCount: wordCount(text) });
+          }
         } catch { skipped++; /* skip unreadable sections */ }
       }
 
